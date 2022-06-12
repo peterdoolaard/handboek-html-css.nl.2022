@@ -1,0 +1,92 @@
+:root {
+    font: 16px/1.4 sans-serif;
+}
+
+@media (min-width: 600px) {
+  :root {
+    font: 18px/1.5 sans-serif;
+  }
+}
+
+body {
+  hyphens: auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.container {
+  max-inline-size: 800px;
+}
+
+main {
+  column-gap: 2em;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+
+main > * {
+  flex: 1 1 320px;
+}
+
+main > h2 {
+  flex: 0 1 100%;
+  margin-block: 0;
+}
+
+label {
+  display: flex;
+  column-gap: 1em;
+  flex-flow: column;
+  justify-content: end;
+}
+
+label > span {
+  flex: 1 1;
+  position: relative;
+}
+
+input {
+  max-inline-size: max(320px, 80vw);
+  padding-inline-start: 1.5em;
+}
+
+span.required::after {
+  block-size: 1em;
+  content: '*';
+  color: red;
+  display: block;
+  position: absolute;
+  inline-size: 1em;
+  text-align: center;
+}
+
+.link-text {
+  background: linear-gradient(to top, hsl(300deg 40% 65%), hsl(300deg 40% 55%) 5%, transparent 5%, transparent 100%);
+  color: hsl(300deg 40% 35%);
+  text-decoration: underline;
+}
+
+.link-text:is(:active, :hover) {
+  color: inherit;
+  animation: hover 180ms ease-in-out forwards 50ms;
+}
+
+
+@keyframes hover {
+  0% {
+    background: linear-gradient(to top, hsl(300deg 40% 65%), hsl(300deg 40% 65%) 20%, transparent 20%, transparent 100%);
+  }
+  25% {
+    background: linear-gradient(to top, hsl(300deg 40% 65%), hsl(300deg 40% 65%) 40%, transparent 20%, transparent 100%);
+  }
+  50% {
+    background: linear-gradient(to top, hsl(300deg 40% 65%), hsl(300deg 40% 65%) 60%, transparent 20%, transparent 100%);
+  }
+  75% {
+    background: linear-gradient(to top,  hsl(300deg 40% 65%), hsl(300deg 40% 65%) 80%, transparent 20%, transparent 100%);
+  }
+  100% {
+    background: linear-gradient(to top,  hsl(300deg 40% 65%), hsl(300deg 40% 65%) 100%);
+  }
+}

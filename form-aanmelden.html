@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aanmeldingsformulier | Voorbeeld bij Handboek HTMl 5 en CSS</title>
+  <link rel="stylesheet" href="/css/form-aanmelden.css">
+</head>
+<body>
+<div class="container">
+  <h1>Voorbeeld aanmeldings<wbr>formulier</h1>
+  <p>Dit is een voorbeeld van een aanmeldingsformulier, bijvoorbeeld voor een klantaccount. Bedenk dat op het verzamelen van persoonsinformatie de AVG van toepassing is, de Algemene verordening gegevensbescherming. Kijk voor informatie op de website van de <a href="https://autoriteitpersoonsgegevens.nl/nl/onderwerpen/avg-europese-privacywetgeving">Autoriteit Persoonsgegevens</a>.</p>
+  <p>Bij het telefoonnumer en de woonplaats zijn reguliere expressies gebruikt om foute invoer te voorkomen. Controle van de invoer op de server blijft noodzakelijk.</p>
+  <main>
+        <form action="/php/form-action.php" method="post">
+          <p>
+            <label>
+              <span>Voornaam</span>
+              <input type="text" name="voornaam">
+            </label>
+          </p>
+          <p>
+            <label>
+              <span>Achternaam</span>
+              <input type="text" name="achternaam">
+            </label>
+          </p>
+          <p>
+            <label>
+              <span>Geboortedatum</span>
+              <input type="date" value="2004-01-01" name="geboortedatum">
+            </label>
+          </p>
+          <p class="nummer_postcode">
+            <label>
+              <span>Huisnummer</span>
+              <input type="text" name="huisnummer">
+            </label>
+          </p>
+          <p>
+            <label>
+              <span>Postcode</span>
+              <input type="text" name="postcode">
+            </label>
+          </p>
+          <p>
+            <label>
+              <span>Straatnaam</span>
+              <input type="text" name="straatnaam">
+            </label>
+          </p>
+          <p>
+            <label>
+              <span>Woonplaats</span>
+              <input type="text" name="woonplaats">
+            </label>
+          </p>
+          <p>
+            <label>
+              <span>Telefoonnummer</span>
+              <input type="text" name="telefoonnummer">
+            </label>
+          </p>
+          <p>
+            <label>
+              <span>Bankrekening (IBAN)</span>
+              <input type="text" name="iban">
+            </label>
+          </p>
+          <button type="submit">Verzenden</button>
+        </form>
+      </div>
+
+</main>
+</div>
+</body>
+</html>

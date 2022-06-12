@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voorbeelden | Handboek HTML 5 en CSS</title>
+  <meta name="description" content="Editie 2022. Handboek HTML5 en CSS is een leerboek en naslagwerk ineen. Leer HTML en CSS van a tot z-index.">
+  <link rel="preload" as="font" href="assets/fonts/SourceSans3-VariableFont_wght.ttf" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/prism.css">
+  <link rel="icon" href="favicon.png"><!-- 32×32 -->
+  <link rel="apple-touch-icon" href="/apple-icon.png"><!-- 180×180 -->
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Handboek HTML5 en CSS | leerboek en naslag voor HTML en CSS">
+  <meta property="og:description" content="Editie 2022. Handboek HTML5 en CSS is een leerboek en naslagwerk ineen. Leer HTML en CSS van a tot z-index.">
+  <meta property="og:url" content="https://www.handboek-html-css.nl">
+  <meta property="og:site_name" content="Handboek HTML5 en CSS">
+  <meta property="og:image" content="https://handboek-html-css.nl/assets/images/9789463562645-groot.jpg">
+  <script type="application/ld+json">
+    {
+      "@type": "WebPage",
+      "mainEntity": {
+        "@type": "Book",
+        "author": {
+          "@type": "Person",
+          "name": "Peter Doolaard"
+        },
+        "bookFormat": "//schema.org/Paperback",
+        "datePublished": "2022-04-27",
+        "thumbnailUrl": "https://handboek-html-css.nl/images/9789463560818-klein.jpg",
+        "inLanguage": "Nederlands",
+        "isbn": "9789463562645",
+        "name": "Handboek HTML5 en CSS",
+        "about": "Leer websites bouwen met HTML en CSS.",
+        "numberOfPages": "462",
+        "publisher": "Van Duuren Media"
+      }
+    }
+  </script>
+  <style>
+    @font-face {
+      font-family: 'SourceSans3';
+      src: url("/assets/fonts/SourceSans3-VariableFont_wght.ttf") format('truetype');
+      font-style: normal;
+      font-weight: 200 900;
+      font-display: swap;
+    }
+
+    :root {
+      --box-shadow: 0 1px 1px hsl(0 0% 0% / 0.12),
+      0 2px 2px hsl(0 0% 0% / 0.12),
+      0 4px 4px hsl(0 0% 0% / 0.12),
+      0 8px 8px hsl(0 0% 0% / 0.12),
+      0 16px 16px hsl(0 0% 0% / 0.12);
+      --box-shadow-sharp: 0 1px 1px hsl(0 0% 0% / 0.25),
+      0 2px 2px hsl(0 0% 0% / 0.20),
+      0 4px 4px hsl(0 0% 0% / 0.15),
+      0 8px 8px hsl(0 0% 0% / 0.10),
+      0 16px 16px hsl(0 0% 0% / 0.05);
+
+      --font-sans: 'SourceSans3', sans-serif;
+      --font-size-base: calc(1rem + 0.2vw);
+      /*--font-size-chapter: calc(var(--font-size-base) + 3rem);*/
+      /*--font-size-chapter-sub: calc(var(--font-size-base) + 1.75rem);*/
+      /*--font-size-example: calc(var(--font-size-base) + 2rem);*/
+      --max-page-width: calc(1280 / 16 * 1rem);
+    }
+
+    @media screen and (min-width: 1024px) {
+      :root {
+        --font-size-base: calc(1.1rem + 0.2vw);
+      }
+    }
+
+    a:any-link, button, [type="button"] {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    #navigationobserver {
+      position: absolute;
+      block-size: 1px;
+      inline-size: 1px;
+      left: 0;
+      top: 420px
+    }
+
+    *,
+    *:is(::before, ::after) {
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: var(--font-size-base);
+    }
+
+    body {
+      background: hsl(300deg 40% 90%);
+      font-family: var(--font-sans);
+      margin: 0;
+      scroll-behavior: smooth;
+    }
+
+    :is(h1, h2, h3, p, pre) {
+      margin-block: 0;
+    }
+
+    :is(h1, h2, h3) {
+      color: hsl(0 0% 15%);
+      font-weight: 500;
+    }
+
+    p {
+      color: hsl(0 0% 5%);
+      font-weight: 400;
+    }
+
+    a:any-link {
+      text-decoration: none;
+    }
+
+    .screen-reader-text:not(:focus):not(:active) {
+      clip-path: inset(50%);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+
+    .page-wrapper {
+      background-color: hsl(0 0% 98%);
+      box-shadow: var(--box-shadow);
+      margin: auto;
+      max-inline-size: var(--max-page-width);
+      min-block-size: 100vh;
+    }
+
+    header {
+      position: relative;
+    }
+
+    .header-container {
+      background: hsl(300deg 40% 35%);
+      block-size: 16rem;
+      clip-path: polygon(0 -1.5rem, 0 100%, 100% 85%, 100% -1.5rem);
+      display: flex;
+      margin-block: 2rem 4rem;
+      position: relative;
+    }
+
+    .logo-outer {
+      align-items: center;
+      background: hsl(210deg 100% 42%);
+      block-size: 10rem;
+      clip-path: polygon(0 0, 0 85%, 50% 100%, 100% 85%, 100% 0);
+      display: flex;
+      flex-flow: column;
+      justify-content: space-evenly;
+      inline-size: 5rem;
+      margin-block-start: -1.5rem;
+      margin-inline-start: 1rem;
+    }
+
+    .logo-book {
+      background: hsl(0 0% 0%);
+      block-size: 3rem;
+      border-start-start-radius: 0.4rem;
+      border-end-start-radius: 0.4rem;
+      position: relative;
+      inline-size: 2.5rem;
+    }
+
+    .logo-book::before {
+      background: hsl(210deg 100% 55%);
+      block-size: 1rem;
+      content: '';
+      clip-path: polygon(0 0, 0 100%, 50% 85%, 100% 100%, 100% 0);
+      inline-size: .5rem;
+      position: absolute;
+      top: 0.125rem;
+      right: 0.25rem;
+    }
+
+    .logo-book::after {
+      background: hsl(0 0% 100%);
+      content: '';
+      border-start-start-radius: .3rem;
+      border-end-start-radius: .3rem;
+      block-size: .6rem;
+      position: absolute;
+      bottom: 4px;
+      left: 4px;
+      right: 4px;
+    }
+
+    .logo-text {
+      color: hsl(0 0% 100%);
+      display: flex;
+      flex-flow: wrap;
+      font-family: var(--font-sans);
+      font-size: 1.5rem;
+      font-weight: 300;
+      justify-content: center;
+      letter-spacing: 0.05em;
+      line-height: 0.9;
+      margin-block-end: 1.5rem;
+    }
+
+    .header-title p {
+      color: hsl(0deg 0% 100%);
+      font-family: var(--font-sans);
+      font-size: 4rem;
+      font-weight: 525;
+      line-height: 0.9;
+      margin-block-start: 3rem;
+      margin-inline-start: 1.5rem;
+      text-align: left;
+    }
+
+    .header-title__number {
+      font-weight: 325;
+    }
+
+    .header-title__small {
+      font-size: 60%;
+      font-variant: all-small-caps;
+      font-weight: 300;
+      vertical-align: top;
+    }
+
+    .header-stamp {
+      display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+      .header-stamp {
+        background: hsl(0 0% 100%);
+        block-size: 10rem;
+        border-radius: 50%;
+        box-shadow: var(--box-shadow);
+        display: grid;
+        inline-size: 10rem;
+        left: 50%;
+        margin-block-end: -2rem;
+        place-items: center;
+        position: absolute;
+        top: 8rem;
+      }
+
+      .stamp-content p {
+        border-block-end: 1px solid hsl(0 0% 0%);
+        color: hsl(0 0% 5%);
+        font-family: var(--font-sans);
+        font-size: 2rem;
+        font-variant-caps: all-petite-caps;
+        font-weight: 400;
+        text-align: center;
+        vertical-align: text-top;
+      }
+
+      .stamp-content sup {
+        font-size: 50%;
+      }
+
+      .stamp-content p:last-of-type {
+        border-block-end: none;
+        font-size: 1.2rem;
+        line-height: 1.1;
+        margin-block-start: 0.5rem;
+      }
+
+      .stamp-content p:last-of-type span {
+        display: block;
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body translate="no">
+<a href="#" class="to-top" aria-label="Omhoog">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-cheveron-up-circle">
+    <circle cx="12" cy="12" r="10" class="primary"/>
+    <path class="secondary" d="M8.7 13.7a1 1 0 1 1-1.4-1.4l4-4a1 1 0 0 1 1.4 0l4 4a1 1 0 0 1-1.4 1.4L12 10.42l-3.3 3.3z"/>
+  </svg>
+</a>
+<div class="page-wrapper">
+  <header>
+    <a href="#main-content" class="screen-reader-text">Naar de hoofdinhoud</a>
+      <a href="/">
+    <div class="header-container">
+      <div class="header-logo">
+        <div class="logo-outer">
+          <div class="logo-book"></div>
+          <div class="logo-text">
+            <span>HAND</span><span>BOEK</span>
+          </div>
+        </div>
+      </div>
+      <div class="header-title">
+        <p>HTML<span class="header-title__number">5</span><br><span class="header-title__small">en</span> CSS<span
+          class="header-title__number"></span></p>
+      </div>
+    </div>
+      </a>
+    <div class="header-stamp">
+      <div class="stamp-content">
+        <p>6<sup>e</sup> editie</p>
+        <p>Geactualiseerd<span>2022</span></p>
+      </div>
+    </div>
+    <h1>
+      <a href="/voorbeelden.html" class="screen-reader-text">Handboek HTML 5 en CSS 3, 6e editie, 2022</a>
+    </h1>
+    <nav class="nav-main">
+      <button type="button" class="slider slider-left" aria-label="Scroll links">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-cheveron-left-circle"><circle cx="12" cy="12" r="10" class="primary"/><path class="secondary" d="M13.7 15.3a1 1 0 0 1-1.4 1.4l-4-4a1 1 0 0 1 0-1.4l4-4a1 1 0 0 1 1.4 1.4L10.42 12l3.3 3.3z"/></svg>
+      </button>
+      <button type="button" class="slider slider-right" aria-label="Scroll rechts">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-cheveron-right-circle"><circle cx="12" cy="12" r="10" class="primary"/><path class="secondary" d="M10.3 8.7a1 1 0 0 1 1.4-1.4l4 4a1 1 0 0 1 0 1.4l-4 4a1 1 0 0 1-1.4-1.4l3.29-3.3-3.3-3.3z"/></svg>
+      </button>
+      <ul class="nav-list">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="#hoofdstuk1">Hoofdstuk 1</a>
+        </li>
+        <li>
+          <a href="#hoofdstuk2">Hoofdstuk 2</a>
+        </li>
+        <li>
+          <a href="#hoofdstuk3">Hoofdstuk 3</a>
+        </li>
+        <li>
+          <a href="#hoofdstuk4">Hoofdstuk 4</a>
+        </li>
+        <li>
+          <a href="#hoofdstuk5">Hoofdstuk 5</a>
+        </li>
+        <li>
+          <a href="#hoofdstuk6">Hoofdstuk 6</a>
+        </li>
+        <li>
+          <a href="#hoofdstuk7">Hoofdstuk 7</a>
+        </li>
+        <li>
+          <a href="#hoofdstuk8">Hoofdstuk 8</a>
+        </li>
+        <li>
+          <a href="#hoofdstuk9">Hoofdstuk 9</a>
+        </li>
+        <li>
+          <a href="#hoofdstuk10">Hoofdstuk 10</a>
+        </li>
+        <li>
+          <a href="#hoofdstuk11">Hoofdstuk 11</a>
+        </li>
+        <li>
+          <a href="#hoofdstuk12">Hoofdstuk 12</a>
+        </li>
+        <li>
+          <a href="#hoofdstuk13">Hoofdstuk 13</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="content-wrapper">
+    <main class="main-content">
+      <div class="inleiding"  id="main-content">
+        <h2 class="inleiding-kop">Introductie</h2>
+        <p>Deze pagina geeft toegang tot voorbeelden uit het boek. De voorbeelden bestaan meestal uit korte stukjes HTML, CSS of beide. Schakel de bewerkmodus in en pas de code aan. Het resultaat ziet u direct in de weergave boven de code. U kunt code veranderen, verwijderen en toevoegen, maar u kunt niet  plakken.</p>
+        <p>Met de kopieerknop maakt u op elk gewenst moment een kopie van de code naar het klembord voor gebruik in uw editor.</p>
+        <p>U vindt hier ook alle links uit het boek, verzameld per hoofdstuk en in dezelfde volgorde als in het boek.</p>
+        <p>Voor vragen of bij problemen mailt u <a class="link-text" href="mailto:handboek@peterdoolaard.nl">handboek@peterdoolaard.nl</a></p>
+      </div>
+      <div class="chapter-wrapper">
+        <h2 class="chapter-title" id="hoofdstuk1">
+          <span class="chapter-title__number">1</span> <span
+          class="chapter-title__text">Webtalen, browsers en editors</span>
+        </h2>
+        <div class="chapter-main-1">
+          <!-- voorbeelden -->
+        </div>
+        <aside class="chapter-aside">
+          <ul class="links-list">
+            <li>
+              <a href="https://www.w3.org/TR/">Webstandaarden en concepten</a>
+            </li>
+            <li>
+              <a href="https://html.spec.whatwg.org/multipage/">HTML The living standard</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/?tag=webapi">Overzicht van Web-API's</a>
+            </li>
+            <li>
+              <a href="https://spec.whatwg.org">Webstandaarden bij WHATWG</a>
+            </li>
+            <li>
+              <a href="https://www.google.com/chrome">Google Chrome</a>
+            </li>
+            <li>
+              <a href="https://www.google.com/intl/nl/chrome/canary/">Chrome Canary</a>
+            </li>
+            <li>
+              <a href="https://chrome.google.com/webstore/category/extensions">Extensies voor Chrome</a>
+            </li>
+            <li>
+              <a href="https://www.microsoft.com/nl-nl/edge">Microsoft Edge</a>
+            </li>
+            <li>
+              <a href="https://www.microsoftedgeinsider.com/en-us/download">Testversies van Edge</a>
+            </li>
+            <li>
+              <a href="https://www.mozilla.org/nl/firefox/new/">Mozilla Firefox</a>
+            </li>
+            <li>
+              <a href="https://addons.mozilla.org/nl/firefox">Add-ons voor Firefox</a>
+            </li>
+            <li>
+              <a href="https://www.mozilla.org/nl/firefox/developer/">Firefox Developer Edition</a>
+            </li>
+            <li>
+              <a href="https://developer.apple.com/safari/download/">Safari Technology Preview</a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/List_of_HTML_editors">Lijst van code-editors</a>
+            </li>
+            <li>
+              <a href="https://brackets.io">Brackets</a>
+            </li>
+            <li>
+              <a href="https://atom.io">Atom</a>
+            </li>
+            <li>
+              <a href="https://www.sublimetext.com">Sublime</a>
+            </li>
+            <li>
+              <a href="https://code.visualstudio.com">Visual Studio Code</a>
+            </li>
+            <li>
+              <a href="https://marketplace.visualstudio.com/VSCode">Extensies voor VS Code</a>
+            </li>
+            <li>
+              <a href="https://www.jetbrains.com/webstorm">Webstorm</a>
+            </li>
+            <li>
+              <a href="https://www.adobe.com/nl/products/dreamweaver.html">Dreamweaver</a>
+            </li>
+            <li>
+              <a href="https://electronjs.org">Electron</a>
+            </li>
+            <li>
+              <a href="https://validator.w3.org">HTML-validator</a>
+            </li>
+            <li>
+              <a href="https://jigsaw.w3.org/css-validator/">CSS-validator</a>
+            </li>
+            <li>
+              <a href="https://caniuse.com ">Can I use</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/">Online naslag voor alle webtechnologie&euml;n</a>
+            </li>
+            <li>
+              <a href="https://web.dev/about/">Lesplatform van Google</a>
+            </li>
+            <li>
+              <a href="https://developer.chrome.com/docs/devtools/">Documentatie Chrome DevTools</a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+      <div class="chapter-wrapper">
+        <h2 class="chapter-title" id="hoofdstuk2">
+          <span class="chapter-title__number">2</span> <span class="chapter-title__text">De basis van HTML</span>
+        </h2>
+        <div class="chapter-main-2">
+        </div>
+        <aside class="chapter-aside">
+          <ul class="links-list">
+            <li>
+              <a href="https://css-tricks.com/a-complete-guide-to-data-attributes/">A Complete Guide to Data
+                Attributes</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes">Using data
+                attributes</a>
+            </li>
+            <li>
+              <a href="https://html.spec.whatwg.org/multipage/dom.html#the-dir-attribute">The dir attribute</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop
+                API</a>
+            </li>
+            <li>
+              <a href="https://developers.google.com/search/docs/guides/intro-structured-data">Understand how structured
+                data works</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop
+                API</a>
+            </li>
+            <li>
+              <a href="https://developers.google.com/search/docs/guides/intro-structured-data">Understand how structured
+                data works</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/wai-aria-1.2/">Accessible Rich Internet Applications (WAI-ARIA) 1.2</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/using-aria/">Using ARIA</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/Translations/WCAG21-nl/">Richtlijnen voor Toegankelijkheid van Webcontent
+                (WCAG) 2.1</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using
+                Service Workers</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">Web Storage API</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/geolocation/">Geolocation API op W3.org</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API">Geolocation API op MDN</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/API">Web API's</a>
+            </li>
+            <li>
+              <a href="https://emmet.io">Emmet — the essential toolkit for web-developers</a>
+            </li>
+            <li>
+              <a href="https://developers.google.com/search/docs/advanced/crawling/special-tags">Meta tags that Google
+                understands</a>
+            </li>
+            <li>
+              <a href="https://html.spec.whatwg.org/multipage/dom.html#content-models">Het contentmodel in de
+                HTML-specificatie.</a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+      <div class="chapter-wrapper">
+        <h2 class="chapter-title" id="hoofdstuk3">
+          <span class="chapter-title__number">3</span> <span class="chapter-title__text">Tekst markeren</span>
+        </h2>
+        <div class="chapter-main-3">
+        </div>
+        <aside class="chapter-aside">
+          <ul class="links-list">
+            <li>
+              <a href="https://html5doctor.com/computer-says-no-to-html5-document-outline/">Voorbeelden van meerdere koppen h1 op een pagina</a>
+            </li>
+            <li>
+              <a href="https://www.nvaccess.org/about-nvda/">Download NVDA-schermleessoftware</a>
+            </li>
+            <li>
+              <a
+                href="https://thenewstack.io/spaces-vs-tabs-a-20-year-debate-and-now-this-what-the-hell-is-wrong-with-go/">Spaces
+                vs. Tabs: A 20-Year Debate Reignited by Google’s Golang</a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/watch?v=SsoOG6ZeyUI">Tabs versus Spaces. Fragment uit Silicon Valley
+                (HBO).</a>
+            </li>
+            <li>
+              <a href="https://caniuse.com/?search=hypens">Browserondersteuning van de CSS-eigenschap
+                <code>hypens</code>.</a>
+            </li>
+            <li>
+              <a href="https://html.spec.whatwg.org/#the-blockquote-element">Voorbeelden van blockquote</a>
+            </li>
+            <li><a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-ul-element">Het contentmodel van het element ul</a>
+            </li>
+            <li>
+              <a href="https://dev.w3.org/html5/html-author/charref">Naslag voor bijzondere tekens in HTML-tekst.</a>
+            </li>
+            <li>
+              <a href="https://lipsum.com">Dummytekstgenerator</a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+      <div class="chapter-wrapper">
+        <h2 class="chapter-title" id="hoofdstuk4">
+          <span class="chapter-title__number">4</span> <span class="chapter-title__text">Koppelingen maken</span>
+        </h2>
+        <div class="chapter-main-4">
+        </div>
+        <aside class="chapter-aside">
+          <ul class="links-list">
+            <li>
+              <a href="https://html.spec.whatwg.org/multipage/links.html#linkTypes">Typen links op whatwg.org</a>
+            </li>
+            <li>
+              <a href="https://codepen.io/dool/pen/VwMLRJW">Voorbeeld van een klikbare kaart</a>
+            </li>
+            <li>
+              <a href="https://www.digitoegankelijk.nl">Informatie van de overheid over digitale toegankelijkheid.</a>
+            </li>
+            <li>
+              <a href="https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs">How to Favicon in 2022: Six files that fit most needs.</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content">Link types: preload</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types">Link types</a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+      <div class="chapter-wrapper">
+        <h2 class="chapter-title" id="hoofdstuk5">
+          <span class="chapter-title__number">5</span> <span class="chapter-title__text">Beeld, geluid en andere
+          externe inhoud</span>
+        </h2>
+        <div class="chapter-main-5">
+        </div>
+        <aside class="chapter-aside">
+          <ul class="links-list">
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/SVG">Uitleg over SVG op MDN</a>
+            </li>
+            <li>
+              <a href="https://css-tricks.com/using-svg/">Nog meer uitleg over SVG op CSS Tricks</a>
+            </li>
+            <li>
+              Gratis fotomateriaal op <a href="https://unsplash.com">Unsplash</a> en <a href="https://pixabay.com">Pixabay</a>
+            </li>
+            <li>
+              <a href="https://www.getpaint.net">Paint.net. Beeldbewerkingssoftware met ondersteuning van WebP en AVIF</a>
+            </li>
+            <li>
+              <a href="https://telegraphics.com.au/sw/product/WebPFormat#webpformat">Plug-in voor WebP in Photoshop</a>
+            </li>
+            <li>
+              <a href="https://www.sketchapp.com">Sketch, software voor grafisch ontwerp met WebP-ondersteuning</a>
+            </li>
+            <li>
+              <a href="https://developers.google.com/speed/webp">Uitleg over converteren naar WebP</a>
+            </li>
+            <li>
+              <a href="https://caniuse.com/avif">Browserondersteuning voor AVIF</a>
+            </li>
+            <li>
+              Converteren naar AVIF op <a href="https://avif.io">avif.io</a> en <a href="https://squoosh.app">squoosh.app</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Artikel over responsive images op MDN</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/WAI/tutorials/images/">Uitleg over het gebruik van het attribuut alt</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-sandbox">Overzicht van attributen van het element iframe</a>
+            </li>
+            <li>
+              Conversiesoftware voor video: <a href="https://www.freemake.com">Freemake Video Converter</a>, <a href="https://www.handbrake.fr">HandBrake</a> (mp4), <a href="https://www.ffmpeg.org">FFmpeg</a> (WebM)
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/html/semantics-embedded-content.html#the-source-element">Overzicht van waarden voor video-codecs</a>
+            </li>
+            <li>
+              <a href="https://w3c.github.io/webvtt/">WebVTT, de standaard voor ondertiteling van video</a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+      <div class="chapter-wrapper">
+        <h2 class="chapter-title" id="hoofdstuk6">
+          <span class="chapter-title__number">6</span> <span class="chapter-title__text">Formulieren maken</span>
+        </h2>
+        <div class="chapter-main-6">
+        </div>
+        <aside class="chapter-aside">
+          <ul class="links-list">
+            <li>
+              Diensten voor het maken en verwerken van formulieren: <a href="https://formspree.io">Formspree</a> en <a href="https://wufoo.com">Wufoo</a>
+            </li>
+            <li>
+              <a href="https://github.com/getify/You-Dont-Know-JS/tree/1st-ed">Gratis onlineboek over JavaScript</a>
+            </li>
+            <li>
+              <a href="https://perl.org">Perl, programmeertaal voor CGI-scripts</a>
+            </li>
+            <li>
+              <a href="https://php.net">PHP, programmeertaal voor onder veel meer formulierverwerking op de server</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">Uitleg over de API Web storage (lokale opslag)</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Uitleg over reguliere expressies</a>
+            </li>
+            <li>
+              <a href="https://www.regex101.com">Testhulpmiddel voor reguliere expressies</a>
+            </li>
+            <li>
+              <a href="https://autoriteitpersoonsgegevens.nl/nl/over-privacy/wetten">Wet bescherming persoonsgegevens</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete">Lijst van waarden voor het attribuut autocomplete</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications">Bestanden uploaden via een formulier</a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+      <div class="chapter-wrapper">
+        <h2 class="chapter-title" id="hoofdstuk7">
+          <span class="chapter-title__number">7</span> <span class="chapter-title__text">Tabellen maken</span>
+        </h2>
+        <div class="chapter-main-7">
+        </div>
+        <aside class="chapter-aside">
+          <ul class="links-list">
+            <li>
+              <a href="https://css-tricks.com/responsive-data-tables/">Responsive data tables</a>
+            </li>
+            <li>
+              <a href="https://css-tricks.com/accessible-simple-responsive-tables/">Accessible, Simple, Responsive Tables</a>
+            </li>
+            <li>
+              <a href="https://www.smashingmagazine.com/2019/01/table-design-patterns-web/">Table Design Patterns On The Web
+              </a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+      <div class="chapter-wrapper">
+        <h2 class="chapter-title" id="hoofdstuk8">
+          <span class="chapter-title__number">8</span> <span
+          class="chapter-title__text">De basis van CSS</span>
+        </h2>
+        <div class="chapter-main-8">
+        </div>
+        <aside class="chapter-aside">
+          <ul class="links-list">
+            <li>
+              <a href="https://www.w3.org/Style/CSS/current-work">Overzicht van CSS-specificaties</a>
+            </li>
+            <li>
+              <a href="https://www.danylkoweb.com/Blog/5-methodologies-for-architecting-css-IP">5 Methodologies for Architecting CSS</a>
+            </li>
+            <li>
+              <a href="https://css-tricks.com/methods-organize-css/">Methods to Organize CSS</a>
+            </li>
+            <li>
+              <a href="https://css-tricks.com/combining-the-powers-of-sem-and-bio-for-improving-css/">Combining the Powers of SEM and BIO for Improving CSS</a>
+            </li>
+            <li>
+              <a href="https://www.smashingmagazine.com/2018/06/bem-for-beginners/">BEM for beginners</a>
+            </li>
+            <li>
+              <a href="https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/">An introduction to Object Oriented CSS (OOCSS)</a>
+            </li>
+            <li>
+              <a href="https://www.smashingmagazine.com/2012/04/decoupling-html-from-css/">Decoupling HTML from CSS</a>
+            </li>
+            <li>
+              <a href="https://www.smashingmagazine.com/2012/06/classes-where-were-going-we-dont-need-classes/">Classes? Where We’re Going, We Don’t Need Classes!</a>
+            </li>
+            <li>
+              <a href="https://caniuse.com/css-has">De selector :has op caniuse.com</a>
+            </li>
+            <li>
+              <a href="https://tailwindcss.com/docs/utility-first">Tailwind, utility first framework</a>
+            </li>
+            <li>
+              <a href="https://frontstuff.io/no-utility-classes-arent-the-same-as-inline-styles">No, Utility Classes Aren't the Same As Inline Styles</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/selectors-3/">CSS Selectors Module Level 3</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/selectors-4/">CSS Selectors Module Level 4</a>
+            </li>
+            <li>
+              <a href="https://caniuse.com/?search=selectors">Selectors op Can I Use...</a>
+            </li>
+            <li>
+              <a href="https://google.github.io/styleguide/htmlcssguide.html">Googles stijlgids voor HTML en CSS</a>
+            </li>
+            <li>
+              <a href="https://primer.style/css/">GitHubs stijlgids voor CSS</a>
+            </li>
+            <li>
+              <a href="https://developer.wordpress.org/coding-standards/wordpress-coding-standards/">Codeerstandaarden van WordPress</a>
+            </li>
+            <li>
+              <a href="https://github.com/necolas/idiomatic-css">CSS-stijlgids geschreven door de auteur van normalize.css</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/CSS21/propidx.html">Lijst van overerfbare eigenschappen in CSS 2.1</a>
+            </li>
+            <li>
+              <a href="https://caniuse.com/css-cascade-layers">Ondersteuning van cascade layers op caniuse.com</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/css-cascade-5/#cascading">De cascade volgens de specificatie Cascading and Inheritance Level 5</a>
+            </li>
+            <li>
+              <a href="https://www.oddbird.net/2022/02/21/layers-guide/">A Complete Guide to CSS Cascade Layers</a>
+            </li>
+            <li>
+              <a href="https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/">The Future of CSS: Cascade Layers (CSS @layer)</a>
+            </li>
+            <li>
+              <a href="https://www.smashingmagazine.com/2022/01/introduction-css-cascade-layers/">Getting Started With CSS Cascade Layers</a>
+            </li>
+            <li>
+              <a href="https://codepen.io/collection/Bnjmma">Verzameling codevoorbeelden op CodePen van CSS Cascade Layers</a>
+            </li>
+            <li>
+              CSS-Resets: <a href="https://meyerweb.com/ eric/tools/css/reset/">Reset CSS</a>, <a href="https://piccalil.li/blog/a-modern-css-reset/">A modern CSS Reset</a>, <a href="https://necolas.github.io/normalize.css/">normalize.css</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/css-values-3/">CSS Values and Units Module Level 3</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/css-values-4/">CSS Values and Units Module Level 4</a>
+            </li>
+            <li>
+              <a href="https://css-tricks.com/rem-global-em-local">Use 'rem' for Global Sizing; Use 'em' for Local Sizing</a>
+            </li>
+            <li>
+              <a href="https://zellwk.com/blog/rem-vs-em/">REM vs EM – The Great Debate</a>
+            </li>
+            <li>
+              <a href="https://zellwk.com/blog/media-query-units/">PX, EM or REM Media Queries?</a>
+            </li>
+            <li>
+              <a href="https://www.bram.us/2021/07/08/the-large-small-and-dynamic-viewports/">The Large, Small, and Dynamic Viewports</a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+      <div class="chapter-wrapper">
+        <h2 class="chapter-title" id="hoofdstuk9">
+          <span class="chapter-title__number">9</span>
+          <span class="chapter-title__text">Lay-out: boxmodel en weergave&shy;model</span>
+        </h2>
+        <div class="chapter-main-9">
+        </div>
+        <aside class="chapter-aside">
+          <ul class="links-list">
+            <li>
+              <a href="https://drafts.csswg.org/css-sizing">De module CSS Box Sizing Level 3</a>
+            </li>
+            <li>
+              <a href="https://ishadeed.com/article/intrinsic-sizing-in-css/">Een artikel over Intrinsic sizing in CSS</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/css-logical-1/">De module CSS Logical Properties and Values level 1 </a>
+            </li>
+            <li>
+              <a href="https://caniuse.com/mdn-css_properties_width_fit-content">De waarde fit-content op caniuse.com</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/css-align-3/">De CSS-module Box-alignment</a>
+            </li>
+            <li>
+              <a href="https://caniuse.com/css-overflow">De eigenschap overflow op caniuse.com</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/css-overscroll-1/">De module CSS Overscroll Behavior level 1 </a>
+            </li>
+            <li>
+              <a href="https://caniuse.com/?search=overscroll-behaviour">Overscroll op caniuse.com</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display#browser_compatibility">Waarden voor de eigenschap display.</a>
+            </li>
+            <li>
+              <a href="https://caniuse.com/css-display-contents">De bruikbaarheid van de waarde contents voor de eigenschap display</a>
+            </li>
+            <li>
+              <a href="https://www.a11yproject.com/posts/how-to-hide-content/">How to hide content (a11y)</a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+      <div class="chapter-wrapper">
+        <h2 class="chapter-title" id="hoofdstuk10">
+          <span class="chapter-title__number">10</span>
+          <span class="chapter-title__text">Lay-outs maken met CSS</span>
+        </h2>
+        <div class="chapter-main-10">
+
+        </div>
+        <aside class="chapter-aside">
+          <ul class="links-list">
+            <li>
+              <a href="https://www.w3.org/TR/mediaqueries-4/">Media queries level 4</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/mediaqueries-5/">Media queries level 5</a>
+            </li>
+            <li>
+              <a href="https://polypane.app">Browser voor ontwikkelaars: Polypane</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/css-device-adapt-1/">Device Adaptation level 1</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/css-position-3/">Positioned Layout level 3</a>
+            </li>
+            <li>
+              <a href="https://caniuse.com/mdn-css_properties_float_flow_relative_values">Logische waarden voor floats op caniuse.com</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context">Artikel over block formatting context</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/css-break-3/">Fragmentation level 3 </a>
+            </li>
+            <li>
+              <a href="https://codepen.io/nabilkaz/pen/eqdENj">Voorbeeld van multi-column op CodePen</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/css-grid-1/">CSS Grid Layout level 1</a>
+            </li>
+            <li>
+              <a href="https://caniuse.com/mdn-css_properties_justify-content_flex_context_safe_unsafe">De waarden safe en unsafe voor uitlijning op de kruisas bij flexbox</a>
+            </li>
+            <li>
+              <a href="https://fontawesome.com">Het icon font (pictogrammenlettertype) FontAwesome</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/css-align-3/">Box Alignment level 3 </a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/css-contain-3/">Containment Module Level 3 (container queries)</a>
+            </li>
+            <li>
+              <a href="https://caniuse.com/css-container-queries">Container queries op caniuse.com</a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+      <div class="chapter-wrapper">
+        <h2 class="chapter-title" id="hoofdstuk11">
+          <span class="chapter-title__number">11</span>
+          <span class="chapter-title__text">Tekst en typografie</span>
+        </h2>
+        <div class="chapter-main-11">
+        </div>
+        <aside class="chapter-aside">
+          <ul class="links-list">
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/">Overzicht van alle CSS-eigenschappen op MDN</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/WOFF2/">WOFF Format 2.0</a>
+            </li>
+            <li>
+              <a href="https://www.google.com/fonts/">Google Fonts</a>
+            </li>
+            <li>
+              <a href="https://fonts.adobe.com/fonts">Adobe Fonts</a>
+            </li>
+            <li>
+              <a href="https://www.fontsquirrel.com/ tools/webfont-generator">Webfont generator op Font Squirrel</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide">Variable fonts guide op MDN</a>
+            </li>
+            <li>
+              <a href="https://www.smashingmagazine.com/2016/05/fluid-typography/">Responsive And Fluid Typography With vh And vw Units</a>
+            </li>
+            <li>
+              <a href="https://caniuse.com/font-size-adjust">De eigenschap font-size-adjust op caniuse</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/css3-fonts/#propdef-font-stretch">De eigenschap font-stretch in de module CSS Font level 3</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant">De eigenschap font-variant op MDN</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font">Nog meer font-eigenschappen op MDN</a>
+            </li>
+            <li>
+              <a href="https://caniuse.com/?search=text-indent">Ondersteuning van de eigenschap text-indent</a>
+            </li>
+            <li>
+              <a href="https://caniuse.com/css-hyphens">Ondersteuning van de eigenschap hyphens</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/css-lists-3/">De module CSS Lists level 3</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/css-counter-styles-3/">De module CSS Counter Styles level 3</a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+      <div class="chapter-wrapper">
+        <h2 class="chapter-title" id="hoofdstuk12">
+          <span class="chapter-title__number">12</span>
+          <span class="chapter-title__text">Kleur, randen en achtergronden</span>
+        </h2>
+        <div class="chapter-main-12">
+        </div>
+        <aside class="chapter-aside">
+          <ul class="links-list">
+            <li>
+              <a href="https://www.smashingmagazine.com/2021/11/guide-modern-css-colors/">A Guide To Modern CSS Colors With RGB, HSL, HWB, LAB And LCH</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">Uitleg over het datatype &lt;color&gt; op MDN</a>
+            </li>
+            <li>
+              <a href="https://www.smashingmagazine.com/2012/10/04/the-code-side-of-color/">Hex Color – The Code Side Of Color</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/css-color-4/">De module CSS Color level 4</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/css-backgrounds-3/#the-background-position">De eigenschap background-position in de module CSS Backgrounds and borders level 3</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/css-backgrounds-3/#the-background-size">De eigenschap background-size in de module CSS Backgrounds and borders level 3</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/css3-background/#border-images">Voorbeeld van randafbeeldingen in de module CSS Backgrounds and borders level 3</a>
+            </li>
+            <li>
+              <a href="https://tobiasahlin.com/blog/layered-smooth-box-shadows/">Smoother & sharper shadows with layered box-shadows</a>
+            </li>
+            <li>
+              <a href="https://material.io/guidelines/">Het ontwerpsysteem Material van Google</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/css-masking-1/">De module CSS Masking level 1</a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+      <div class="chapter-wrapper">
+        <h2 class="chapter-title" id="hoofdstuk13">
+          <span class="chapter-title__number">13</span>
+          <span class="chapter-title__text">Overgangen, animaties, attr() en CSS-variabelen</span>
+        </h2>
+        <div class="chapter-main-13">
+        </div>
+        <aside class="chapter-aside">
+          <ul class="links-list">
+            <li>
+              <a href="https://www.smashingmagazine.com/2014/04/understanding-css-timing-functions/">Understanding The CSS3 transition-timing-function Property</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/single-transition-timing-function">Timing functions op MDN</a>
+            </li>
+            <li>
+              <a href="https://animate.style">Uitgebreide verzameling van animaties met CSS</a>
+            </li>
+            <li>
+              <a href="https://threejs.org/examples/css3d_periodictable.html">Een geanimeerde weergave van het periodiek systeem van scheikundige elementen</a>
+            </li>
+            <li>
+              <a href="https://codepen.io/juliangarnier/pen/idhuG">Een geanimeerde weergave van ons zonnestelsel</a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/TR/css-variables-1/">De module CSS Custom Properties for Cascading Variables level 1</a>
+            </li>
+            <li>
+              <a href="https://material.io/design/components/navigation-drawer.html#">Een 'navigatielade' maken met Material</a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </main>
+  </div>
+</div>
+<div id="navigationobserver"></div>
+
+<template id="chapter-template">
+
+</template>
+<script>
+  // const contentWrapper = document.querySelector('.content-wrapper');
+  // contentWrapper.setAttribute('hidden', '');
+  // window.addEventListener('load', () => {
+  //   contentWrapper.removeAttribute('hidden');
+  // });
+</script>
+<script src="js/voorbeelden.js" type="module" defer></script>
+<script src="js/prism.js" defer></script>
+</body>
+
+</html>

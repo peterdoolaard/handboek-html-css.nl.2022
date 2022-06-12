@@ -1,0 +1,40 @@
+<IfModule mod_headers.c>
+Header set Connection keep-alive
+
+# Header set Content-Security-Policy "default-src https: 'unsafe-inline'; img-src 'self'; child-src 'self'"
+# Cache-control headers
+    # 2 HOURS
+    #<filesMatch "*">
+        Header set Cache-Control "max-age=7200, must-revalidate"
+    #</filesMatch>
+
+    # 480 weeks - 290304000
+    # 30 dagen
+    <filesMatch "\.(jpg|jpeg|png|webp|avif|gif|js|mp4|vtt)$">
+        Header set Cache-Control "max-age=2592000, public"
+    </filesMatch>
+
+    # 1 DAY
+    <filesMatch "\.(css)$">
+        Header set Cache-Control "max-age=86400, public, must-revalidate"
+        #Header set Cache-Control "max-age=0, public, must-revalidate"
+    </filesMatch>
+
+    # 2 DAYS
+    <filesMatch "\.(xml|txt)$">
+        Header set Cache-Control "max-age=172800, public, must-revalidate"
+    </filesMatch>
+
+    # 2 HOURS
+    <filesMatch "\.(html|htm)$">
+        Header set Cache-Control "max-age=7200, must-revalidate"
+    </filesMatch>
+
+    <FilesMatch "\.(gif|jpg|png|webp|avif|mp4|css|js|txt)$">
+        Header append Cache-Control "public"
+    </FilesMatch>
+   # 480 weeks
+    <filesMatch "\.(eot|svg|ttf|woff|woff2)$">
+        Header set Cache-Control "max-age=1209600, public"
+    </filesMatch>
+</IfModule>

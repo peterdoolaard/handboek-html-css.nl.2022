@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Downloads | Handboek HTML5 en CSS</title>
+  <meta name="description" content="Editie 2022. Handboek HTML 5 en CSS 3 is een leerboek en naslagwerk ineen. Leer websites bouwen met HTML en CSS.">
+  <link rel="preload" as="font" href="assets/fonts/SourceSans3-VariableFont_wght.ttf" type="font/ttf" crossorigin="">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="favicon.png" sizes="any"><!-- 32×32 -->
+  <link rel="apple-touch-icon" href="/apple-icon.png"><!-- 180×180 -->
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Handboek HTML5 en CSS | leerboek en naslag voor HTML en CSS">
+  <meta property="og:description" content="Editie 2022. Handboek HTML5 en CSS3 is een leerboek en naslagwerk ineen. Leer websites bouwen met HTML en CSS.">
+  <meta property="og:url" content="https://www.handboek-html-css.nl">
+  <meta property="og:site_name" content="Handboek HTML5 en CSS3">
+  <meta property="og:image" content="https://handboek-html-css.nl/assets/images/9789463562645-groot.jpg">
+  <script type="application/ld+json">
+    {
+      "@type": "WebPage",
+      "mainEntity": {
+        "@type": "Book",
+        "author": {
+          "@type": "Person",
+          "name": "Peter Doolaard"
+        },
+        "bookFormat": "//schema.org/Paperback",
+        "datePublished": "2022-04-27",
+        "thumbnailUrl": "https://handboek-html-css.nl/images/9789463560818-klein.jpg",
+        "inLanguage": "Nederlands",
+        "isbn": "9789463562645",
+        "name": "Handboek HTML5 en CSS",
+        "about": "Leer websites bouwen met HTML en CSS.",
+        "numberOfPages": "462",
+        "publisher": "Van Duuren Media"
+      }
+    }
+  </script>
+  <style>
+    @font-face {
+      font-family: 'SourceSans3';
+      src: url("../assets/fonts/SourceSans3-VariableFont_wght.ttf") format('truetype');
+      font-style: normal;
+      font-weight: 200 900;
+      font-display: swap;
+    }
+
+    :root {
+      --box-shadow: 0 1px 1px hsl(0 0% 0% / 0.12),
+      0 2px 2px hsl(0 0% 0% / 0.12),
+      0 4px 4px hsl(0 0% 0% / 0.12),
+      0 8px 8px hsl(0 0% 0% / 0.12),
+      0 16px 16px hsl(0 0% 0% / 0.12);
+      --box-shadow-sharp: 0 1px 1px hsl(0 0% 0% / 0.25),
+      0 2px 2px hsl(0 0% 0% / 0.20),
+      0 4px 4px hsl(0 0% 0% / 0.15),
+      0 8px 8px hsl(0 0% 0% / 0.10),
+      0 16px 16px hsl(0 0% 0% / 0.05);
+
+      --font-sans: 'SourceSans3', sans-serif;
+      --font-size-base: calc(1rem + 0.2vw);
+      --max-page-width: calc(1280 / 16 * 1rem);
+    }
+
+    @media screen and (min-width: 1024px) {
+      :root {
+        --font-size-base: calc(1.1rem + 0.2vw);
+      }
+    }
+
+    a:any-link, button, [type="button"] {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    #navigationobserver {
+      position: absolute;
+      block-size: 1px;
+      inline-size: 1px;
+      left: 0;
+      top: 420px
+    }
+
+    *,
+    *:is(::before, ::after) {
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: var(--font-size-base);
+    }
+
+    body {
+      background: hsl(300deg 40% 90%);
+      font-family: var(--font-sans);
+      margin: 0;
+      scroll-behavior: smooth;
+    }
+
+    :is(h1, h2, h3, p, pre) {
+      margin-block: 0;
+    }
+
+    :is(h1, h2, h3) {
+      color: hsl(0 0% 15%);
+      font-weight: 500;
+    }
+
+    p {
+      color: hsl(0 0% 5%);
+      font-weight: 400;
+    }
+
+    a:any-link {
+      text-decoration: none;
+    }
+
+    .screen-reader-text:not(:focus):not(:active) {
+      clip-path: inset(50%);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+
+    .page-wrapper {
+      background-color: hsl(0 0% 98%);
+      box-shadow: var(--box-shadow);
+      margin: auto;
+      max-inline-size: var(--max-page-width);
+      min-block-size: 100vh;
+    }
+
+    header {
+      position: relative;
+    }
+
+    .header-container {
+      background: hsl(300deg 40% 35%);
+      block-size: 16rem;
+      clip-path: polygon(0 -1.5rem, 0 100%, 100% 85%, 100% -1.5rem);
+      display: flex;
+      margin-block: 2rem 4rem;
+      position: relative;
+    }
+
+    .logo-outer {
+      align-items: center;
+      background: hsl(210deg 100% 42%);
+      block-size: 10rem;
+      clip-path: polygon(0 0, 0 85%, 50% 100%, 100% 85%, 100% 0);
+      display: flex;
+      flex-flow: column;
+      justify-content: space-evenly;
+      inline-size: 5rem;
+      margin-block-start: -1.5rem;
+      margin-inline-start: 1rem;
+    }
+
+    .logo-book {
+      background: hsl(0 0% 0%);
+      block-size: 3rem;
+      border-start-start-radius: 0.4rem;
+      border-end-start-radius: 0.4rem;
+      position: relative;
+      inline-size: 2.5rem;
+    }
+
+    .logo-book::before {
+      background: hsl(210deg 100% 55%);
+      block-size: 1rem;
+      content: '';
+      clip-path: polygon(0 0, 0 100%, 50% 85%, 100% 100%, 100% 0);
+      inline-size: .5rem;
+      position: absolute;
+      top: 0.125rem;
+      right: 0.25rem;
+    }
+
+    .logo-book::after {
+      background: hsl(0 0% 100%);
+      content: '';
+      border-start-start-radius: .3rem;
+      border-end-start-radius: .3rem;
+      block-size: .6rem;
+      position: absolute;
+      bottom: 4px;
+      left: 4px;
+      right: 4px;
+    }
+
+    .logo-text {
+      color: hsl(0 0% 100%);
+      display: flex;
+      flex-flow: wrap;
+      font-family: var(--font-sans);
+      font-size: 1.5rem;
+      font-weight: 300;
+      justify-content: center;
+      letter-spacing: 0.05em;
+      line-height: 0.9;
+      margin-block-end: 1.5rem;
+    }
+
+    .header-title p {
+      color: hsl(0deg 0% 100%);
+      font-family: var(--font-sans);
+      font-size: 4rem;
+      font-weight: 525;
+      line-height: 0.9;
+      margin-block-start: 3rem;
+      margin-inline-start: 1.5rem;
+      text-align: left;
+    }
+
+    .header-title__number {
+      font-weight: 325;
+    }
+
+    .header-title__small {
+      font-size: 60%;
+      font-variant: all-small-caps;
+      font-weight: 300;
+      vertical-align: top;
+    }
+
+    .header-stamp {
+      display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+      .header-stamp {
+        background: hsl(0 0% 100%);
+        block-size: 10rem;
+        border-radius: 50%;
+        box-shadow: var(--box-shadow);
+        display: grid;
+        inline-size: 10rem;
+        left: 50%;
+        margin-block-end: -2rem;
+        place-items: center;
+        position: absolute;
+        top: 8rem;
+      }
+
+      .stamp-content p {
+        border-block-end: 1px solid hsl(0 0% 0%);
+        color: hsl(0 0% 5%);
+        font-family: var(--font-sans);
+        font-size: 2rem;
+        font-variant-caps: all-petite-caps;
+        font-weight: 400;
+        text-align: center;
+        vertical-align: text-top;
+      }
+
+      .stamp-content sup {
+        font-size: 50%;
+      }
+
+      .stamp-content p:last-of-type {
+        border-block-end: none;
+        font-size: 1.2rem;
+        line-height: 1.1;
+        margin-block-start: 0.5rem;
+      }
+
+      .stamp-content p:last-of-type span {
+        display: block;
+        font-size: 2rem;
+      }
+    }
+
+  </style>
+</head>
+<body translate="no">
+<a href="#" class="to-top" aria-label="Omhoog">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-cheveron-up-circle">
+    <circle cx="12" cy="12" r="10" class="primary"/>
+    <path class="secondary" d="M8.7 13.7a1 1 0 1 1-1.4-1.4l4-4a1 1 0 0 1 1.4 0l4 4a1 1 0 0 1-1.4 1.4L12 10.42l-3.3 3.3z"/>
+  </svg>
+</a>
+<div class="page-wrapper">
+  <header>
+    <a href="#main-content" class="screen-reader-text">Naar de hoofdinhoud</a>
+    <a href="/">
+      <div class="header-container">
+        <div class="header-logo">
+          <div class="logo-outer">
+            <div class="logo-book"></div>
+            <div class="logo-text">
+              <span>HAND</span><span>BOEK</span>
+            </div>
+          </div>
+        </div>
+        <div class="header-title">
+          <p>HTML<span class="header-title__number">5</span><br><span class="header-title__small">en</span> CSS<span
+            class="header-title__number"></span></p>
+        </div>
+      </div>
+    </a>
+    <div class="header-stamp">
+      <div class="stamp-content">
+        <p>6<sup>e</sup> editie</p>
+        <p>Geactualiseerd<span>2022</span></p>
+      </div>
+    </div>
+    <h1>
+      <a href="/" class="screen-reader-text">Handboek HTML 5 en CSS 3, 6e editie, 2022</a>
+    </h1>
+    <nav class="nav-main">
+      <ul class="nav-list">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="voorbeelden.html">Voorbeelden 6e editie</a>
+        </li>
+        <li>
+          <a href="downloads.html" aria-current="page">Downloads vorige edities</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="content-wrapper">
+    <main class="main-content">
+      <div id="main-content">
+        <h2 class="inleiding-kop">Downloads voorgaande edities</h2>
+        <p>Voor elke voorgaande editie is een zipbestand beschikbaar met voorbeeldcode.<br> Welke editie u bezit ziet u op het omslag van het boek.</p>
+        <ul>
+          <li>
+            <a class="link-text" href="/download/Handboek_HTML5_CSS3_editie1_voorbeeldcode.zip">Eerste editie</a>
+          </li>
+          <li>
+            <a class="link-text" href="/download/Handboek_HTML5_CSS3_editie2_voorbeeldcode.zip">Tweede editie</a>
+          </li>
+          <li>
+            <a class="link-text" href="/download/Handboek_HTML5_CSS3_editie3_voorbeeldcode-geen-media.zip">Derde editie zonder media</a>
+          </li>
+          <li>
+            <a class="link-text" href="/download/Handboek_HTML5_CSS3_editie3_voorbeeldcode.zip">Derde editie compleet</a>
+          </li>
+          <li>
+            <a class="link-text" href="/download/Handboek_HTML5_CSS3_editie4_voorbeeldcode.zip">Vierde editie</a>
+          </li>
+          <li>
+            <a class="link-text" href="/download/Handboek_HTML5_CSS3_editie5_voorbeeldcode.zip">Vijfde editie</a>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </div>
+
+</div> <!-- pagewrapper -->
+
+<div id="navigationobserver"></div>
+<script>
+  const contentWrapper = document.querySelector('.content-wrapper');
+  contentWrapper.setAttribute('hidden', '');
+  window.addEventListener('load', () => {
+    contentWrapper.removeAttribute('hidden');
+  });
+
+  // fixed knop voor navigatie naar boven
+  document.querySelector('.to-top').addEventListener('click', (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+</body>
+</html>
