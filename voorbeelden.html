@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Voorbeelden | Handboek HTML 5 en CSS</title>
   <meta name="description" content="Editie 2022. Handboek HTML5 en CSS is een leerboek en naslagwerk ineen. Leer HTML en CSS van a tot z-index.">
-  <link rel="preload" as="font" href="assets/fonts/SourceSans3-VariableFont_wght.ttf" type="font/ttf" crossorigin>
+<!--  <link href="assets/fonts/SourceSans3-VariableFont_wght.ttf" type="font/ttf" crossorigin>-->
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/prism.css">
   <link rel="icon" href="favicon.png"><!-- 32×32 -->
-  <link rel="apple-touch-icon" href="/apple-icon.png"><!-- 180×180 -->
+  <link rel="apple-touch-icon" href="/favicon.png"><!-- 180×180 -->
   <meta property="og:locale" content="nl_NL">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Handboek HTML5 en CSS | leerboek en naslag voor HTML en CSS">
@@ -276,6 +276,21 @@
       }
     }
   </style>
+  <!-- Matomo -->
+  <script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//handboek-html-css.nl/matomo/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '1']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
 </head>
 <body translate="no">
 <a href="#" class="to-top" aria-label="Omhoog">
@@ -371,7 +386,14 @@
         <h2 class="inleiding-kop">Introductie</h2>
         <p>Deze pagina geeft toegang tot voorbeelden uit het boek. De voorbeelden bestaan meestal uit korte stukjes HTML, CSS of beide. Schakel de bewerkmodus in en pas de code aan. Het resultaat ziet u direct in de weergave boven de code. U kunt code veranderen, verwijderen en toevoegen, maar u kunt niet  plakken.</p>
         <p>Met de kopieerknop maakt u op elk gewenst moment een kopie van de code naar het klembord voor gebruik in uw editor.</p>
+        <h3 class="inleiding-subkop">Links uit het boek</h3>
         <p>U vindt hier ook alle links uit het boek, verzameld per hoofdstuk en in dezelfde volgorde als in het boek.</p>
+        <h3 class="inleiding-subkop">Complete pagina's</h3>
+        <p>Sommige technieken staan op een eigen pagina. Dat zijn:</p>
+        <ul role="list">
+          <li><a class="link-text" href="form-aanmelden.php">Een compleet aanmeldingsformulier met verwerking op de server</a></li>
+          <li><a class="link-text" href="nos_voorbeeld.html">CSS Grid Layout (voorbeeld voorpagina nos.nl)</a></li>
+        </ul>
         <p>Voor vragen of bij problemen mailt u <a class="link-text" href="mailto:handboek@peterdoolaard.nl">handboek@peterdoolaard.nl</a></p>
       </div>
       <div class="chapter-wrapper">

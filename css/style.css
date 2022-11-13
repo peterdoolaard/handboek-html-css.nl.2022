@@ -123,20 +123,20 @@
   display: inline-block;
   padding: 0.25em 0.5em;
   text-decoration: none;
-  transition: all ease-in-out 200ms;
+  transition: text-decoration ease-in-out 200ms;
 }
 
 .nav-main:not(.fixed) a:any-link:hover {
   color: hsl(300deg 40% 35%);
   text-decoration-line: underline;
   text-decoration-thickness: 0.2em;
-  transition: all ease-in-out 200ms;
+  transition: text-decoration-line, text-decoration-thickness ease-in-out 200ms;
 }
 
 .fixed a:any-link {
   border-block-start: 2px solid hsl(300deg 40% 35%);
   text-decoration-line: none;
-  transition: all 400ms ease-in-out 100ms;
+  transition: text-decoration-line 400ms ease-in-out 100ms;
 }
 
 .fixed a:any-link:hover {
@@ -155,18 +155,40 @@
 }
 
 .inleiding {
-  break-inside: avoid-column;
-  column-count: 2;
-  column-gap: 2rem;
-  column-width: 20em;
   padding-inline-end: 1rem;
 }
 
-.inleiding-kop {
-  column-span: all;
+@media (min-width: 700px) {
+  .inleiding {
+    align-items: baseline;
+    column-gap: 2rem;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    max-width: 1024px;
+  }
 }
 
-.inleiding p {
+.inleiding [class*='kop'] {
+  grid-column: 1;
+  line-height: 1;
+}
+
+.inleiding-subkop {
+  margin-block-start: 0.5rem;
+}
+
+.inleiding ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.inleiding li {
+  margin-block-end: 0.3rem;
+}
+
+.inleiding > p, ul {
+  grid-column: 2;
   margin-block-end: 0.5em;
 }
 
@@ -296,6 +318,8 @@
   box-shadow: var(--box-shadow-sharp);
   display: inline-block;
   margin-block: 2em;
+  grid-column: 1 / 3;
+  justify-self: center;
 }
 
 .widget img {

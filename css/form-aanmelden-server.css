@@ -7,3 +7,33 @@
 main {
   display: block;
 }
+
+.link-text {
+  background: linear-gradient(to top, hsl(300deg 40% 65%), hsl(300deg 40% 55%) 5%, transparent 5%, transparent 100%);
+  color: hsl(300deg 40% 35%);
+  text-decoration: underline;
+}
+
+.link-text:is(:active, :hover) {
+  color: inherit;
+  animation: hover 180ms ease-in-out forwards 50ms;
+}
+
+
+@keyframes hover {
+  0% {
+    background: linear-gradient(to top, hsl(300deg 40% 65%), hsl(300deg 40% 65%) 20%, transparent 20%, transparent 100%);
+  }
+  25% {
+    background: linear-gradient(to top, hsl(300deg 40% 65%), hsl(300deg 40% 65%) 40%, transparent 20%, transparent 100%);
+  }
+  50% {
+    background: linear-gradient(to top, hsl(300deg 40% 65%), hsl(300deg 40% 65%) 60%, transparent 20%, transparent 100%);
+  }
+  75% {
+    background: linear-gradient(to top,  hsl(300deg 40% 65%), hsl(300deg 40% 65%) 80%, transparent 20%, transparent 100%);
+  }
+  100% {
+    background: linear-gradient(to top,  hsl(300deg 40% 65%), hsl(300deg 40% 65%) 100%);
+  }
+}

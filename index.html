@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home | Handboek HTML5 en CSS</title>
-  <meta name="description" content="Editie 2022. Handboek HTML 5 en CSS 3 is een leerboek en naslagwerk ineen. Leer websites bouwen met HTML en CSS.">
-  <link rel="preload" as="font" href="/assets/fonts/SourceSans3-VariableFont_wght.ttf" type="font/ttf" crossorigin>
+  <meta name="description" content="Editie 2022. Handboek HTML 5 en CSS is een leerboek en naslagwerk ineen. Leer websites bouwen met HTML en CSS.">
+<!--  <link href="/assets/fonts/SourceSans3-VariableFont_wght.ttf" type="font/ttf" crossorigin>-->
   <link rel="stylesheet" href="/css/style.css">
   <link rel="icon" href="favicon.png" sizes="any"><!-- 32×32 -->
-  <link rel="apple-touch-icon" href="/apple-icon.png"><!-- 180×180 -->
+  <link rel="apple-touch-icon" href="/favicon.png"><!-- 180×180 -->
   <meta property="og:locale" content="nl_NL">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Handboek HTML5 en CSS | leerboek en naslag voor HTML en CSS">
@@ -272,6 +272,21 @@
       }
     }
   </style>
+  <!-- Matomo -->
+  <script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//handboek-html-css.nl/matomo/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '1']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
 </head>
 <body translate="no">
 <a href="#" class="to-top" aria-label="Omhoog">
@@ -282,21 +297,22 @@
 </a>
 <div class="page-wrapper">
   <header>
-    <a href="#main-content" class="screen-reader-text">Naar de hoofdinhoud</a> <a href="/" aria-label="Home">
-    <div class="header-container">
-      <div class="header-logo">
-        <div class="logo-outer">
-          <div class="logo-book"></div>
-          <div class="logo-text">
-            <span>HAND</span><span>BOEK</span>
+    <a href="#main-content" class="screen-reader-text">Naar de hoofdinhoud</a>
+    <a href="/" aria-label="Home">
+      <div class="header-container">
+        <div class="header-logo">
+          <div class="logo-outer">
+            <div class="logo-book"></div>
+            <div class="logo-text">
+              <span>HAND</span><span>BOEK</span>
+            </div>
           </div>
         </div>
+        <div class="header-title">
+          <p>HTML<span class="header-title__number">5</span><br><span class="header-title__small">en</span> CSS<span class="header-title__number"></span></p>
+        </div>
       </div>
-      <div class="header-title">
-        <p>HTML<span class="header-title__number">5</span><br><span class="header-title__small">en</span> CSS<span class="header-title__number"></span></p>
-      </div>
-    </div>
-  </a>
+    </a>
     <div class="header-stamp">
       <div class="stamp-content">
         <p>6<sup>e</sup> editie</p>
@@ -341,7 +357,7 @@
             </div>
             <div class="widget-text">
               <p>
-                <span class="widget-text__title">Handboek HTML 5 en CSS<br>6e editie</span> <span>Peter Doolaard</span> <span>978-94-6356-264-5</span> <span>462 pagina's</span> <span>&euro; 44,99</span><span>Van Duuren Media, 2022</span>
+                <span class="widget-text__title">Handboek HTML 5 en CSS<br>6e editie</span> <span>Peter Doolaard</span> <span>978-94-6356-264-5</span> <span>524 pagina's</span> <span>&euro; 44,99</span><span>Van Duuren Media, 2022</span>
               </p>
             </div>
           </div>
@@ -353,6 +369,7 @@
 </div> <!-- pagewrapper -->
 
 <div id="navigationobserver"></div>
+<a rel="me" href="https://mastodon.social/@peterdoolaard" class="screen-reader-text">Mastodon</a>
 
 <script>
   const contentWrapper = document.querySelector('.content-wrapper');

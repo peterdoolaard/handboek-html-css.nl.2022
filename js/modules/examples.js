@@ -58,8 +58,8 @@ p {
       code: `<p>Om in een webpagina een nieuwe alinea te beginnen, wordt de tekst in het element &lt;p&gt; geplaatst.</p>
 <p>De stylesheet van de browser voegt witruimte tussen de alinea's toe.</p>
 <p>Meerdere regeleinden en tabs in de broncode 
-\t
-\t
+  
+  
 worden door de browser genegeerd. Er wordt gewoon één alinea van gemaakt.</p>
 `,
       codeStyle: ``,
@@ -259,22 +259,22 @@ ook jij beklimt de Fuji<br>
       id: '316',
       title: 'Geordende lijst',
       code: `<ol type="I">
-\t<li>Stroomvoorziening <!-- item niet afsluiten, de volgende lijst hoort bij dit onderwerp -->
-\t\t<ol type="1">
-\t\t\t<li>Kabel <!-- item niet afsluiten, de volgende lijst hoort bij dit onderwerp -->
-\t\t\t\t<ol type="a">
-\t\t\t\t\t<li>Apparaataansluiting</li>
-\t\t\t\t\t<li>Lichtnetaansluiting</li>
-\t\t\t\t</ol> <!-- einde letterlijst -->
-\t\t\t</li> <!-- einde item Kabel -->
-\t\t\t<li>Aan-uitschakelaar</li>
-\t\t</ol> <!-- einde nummerlijst -->
-\t</li> <!-- einde item Stroomvoorziening -->
-\t<li>Toetsenbord <!-- vervolg Romeinse lijst; de volgende lijst hoort bij dit onderwerp -->
-\t\t<ol>
-\t\t\t<li>Aansluiting</li>
-\t\t</ol>
-\t</li> <!-- einde item toetsenbord -->
+  <li>Stroomvoorziening <!-- item niet afsluiten, de volgende lijst hoort bij dit onderwerp -->
+    <ol type="1">
+      <li>Kabel <!-- item niet afsluiten, de volgende lijst hoort bij dit onderwerp -->
+        <ol type="a">
+          <li>Apparaataansluiting</li>
+          <li>Lichtnetaansluiting</li>
+        </ol> <!-- einde letterlijst -->
+      </li> <!-- einde item Kabel -->
+      <li>Aan-uitschakelaar</li>
+    </ol> <!-- einde nummerlijst -->
+  </li> <!-- einde item Stroomvoorziening -->
+  <li>Toetsenbord <!-- vervolg Romeinse lijst; de volgende lijst hoort bij dit onderwerp -->
+    <ol>
+      <li>Aansluiting</li>
+    </ol>
+  </li> <!-- einde item toetsenbord -->
 </ol> <!-- einde Romeinse lijst -->
 `,
       codeStyle: ``,
@@ -287,15 +287,15 @@ ook jij beklimt de Fuji<br>
       id: '317',
       title: 'Ongeordende lijst',
       code: `<ul>
-\t<li>voorwiel
-\t\t<ul>
-\t\t\t<li>trommelrem</li>
-\t\t\t<li>naafdynamo</li>
-\t\t</ul>
-\t</li>
-\t<li>achterwiel</li>
-\t<li>stuur</li>
-\t<li>trappers</li>
+  <li>voorwiel
+    <ul>
+      <li>trommelrem</li>
+      <li>naafdynamo</li>
+    </ul>
+  </li>
+  <li>achterwiel</li>
+  <li>stuur</li>
+  <li>trappers</li>
 </ul>
 `,
       codeStyle: ``,
@@ -308,12 +308,12 @@ ook jij beklimt de Fuji<br>
       id: '318',
       title: 'Ongeordende lijst',
       code: `<nav>
-\t<ul>
-\t\t<li><a href="index.html">Home</a></li>
-\t\t<li><a href="producten.html">Producten</a></li>
-\t\t<li><a href="diensten.html">Diensten</a></li>
-\t\t<li><a href="service.html">Klantenservice</a></li>
-\t</ul>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="producten.html">Producten</a></li>
+    <li><a href="diensten.html">Diensten</a></li>
+    <li><a href="service.html">Klantenservice</a></li>
+  </ul>
 </nav>
 `,
       codeStyle: ``,
@@ -328,13 +328,13 @@ ook jij beklimt de Fuji<br>
       code: `<h2>Recept voor stamppot boerenkool</h2>
 <h3>Ingrediënten</h3>
 <ul>
-\t<li>boerenkool</li>
-\t<li>aardappelen</li>
+  <li>boerenkool</li>
+  <li>aardappelen</li>
 </ul>
 <h3>Bereiding</h3>
-\t<ol>
-\t\t<li>Schil de aardappelen.</li>
-\t\t<li>Snij de boerenkool fijn.</li>
+  <ol>
+    <li>Schil de aardappelen.</li>
+    <li>Snij de boerenkool fijn.</li>
 </ol>
 `,
       codeStyle: ``,
@@ -347,18 +347,18 @@ ook jij beklimt de Fuji<br>
       id: '320',
       title: 'Lijst als illustratie',
       code: `<figure>
-\t<figcaption>Kenmerken van onze fietsen</figcaption>
-\t<ul>
-\t\t<li>voorwiel
-\t\t\t<ul>
-\t\t\t\t<li>trommelrem</li>
-\t\t\t\t<li>naafdynamo</li>
-\t\t\t</ul>
-\t\t</li>
-\t\t<li>achterwiel</li>
-\t\t<li>stuur</li>
-\t\t<li>trappers</li>
-\t</ul>
+  <figcaption>Kenmerken van onze fietsen</figcaption>
+  <ul>
+    <li>voorwiel
+      <ul>
+        <li>trommelrem</li>
+        <li>naafdynamo</li>
+      </ul>
+    </li>
+    <li>achterwiel</li>
+    <li>stuur</li>
+    <li>trappers</li>
+  </ul>
 </figure>
 `,
       codeStyle: ``,
@@ -371,19 +371,19 @@ ook jij beklimt de Fuji<br>
       id: '321',
       title: 'Illustratie met bijschrift',
       code: `<figure>
-\t<figcaption>Chips, van veld naar zak</figcaption>
-\t<figure> 
-\t\t<img src="/assets/voorbeelden/aardappelveld.jpg" alt="Aardappels op het veld." loading="lazy">
-\t\t<figcaption>De aardappels staan op het veld.</figcaption>
-\t</figure>
-\t<figure> 
-\t\t<img src="/assets/voorbeelden/fabriek.jpg" alt="Aardappels in de fabriek." loading="lazy">
-\t\t<figcaption>De aardappels worden verwerkt in de fabriek.</figcaption>
-\t</figure>
-\t<figure> 
-\t\t<img src="/assets/voorbeelden/chips.jpg" alt="Chips in zakken." loading="lazy">
-\t\t<figcaption>De zakken chips staan klaar voor de consument.</figcaption>
-\t</figure>
+  <figcaption>Chips, van veld naar zak</figcaption>
+  <figure> 
+    <img src="/assets/voorbeelden/aardappelveld.jpg" alt="Aardappels op het veld." loading="lazy">
+    <figcaption>De aardappels staan op het veld.</figcaption>
+  </figure>
+  <figure> 
+    <img src="/assets/voorbeelden/fabriek.jpg" alt="Aardappels in de fabriek." loading="lazy">
+    <figcaption>De aardappels worden verwerkt in de fabriek.</figcaption>
+  </figure>
+  <figure> 
+    <img src="/assets/voorbeelden/chips.jpg" alt="Chips in zakken." loading="lazy">
+    <figcaption>De zakken chips staan klaar voor de consument.</figcaption>
+  </figure>
 </figure>
 `,
       codeStyle: `
@@ -419,19 +419,19 @@ ook jij beklimt de Fuji<br>
 </dl>
 <h2>Veelgestelde vragen</h2>
 <dl>
-\t<dt>Hoe markeer ik een kop?</dt>
-\t<dd>Met de elementen &lt;h1&gt; tot &lt;h6&gt;.</dd>
-\t<dt>Hoe markeer ik een alinea?</dt>
-\t<dd>Met het element &lt;p&gt;.</dd>
-\t<dt>Hoe markeer ik een FAQ?</dt>
-\t<dd>Met de elementen &lt;dl&gt;, &lt;dt&gt; en &lt;dd&gt;.</dd>
+  <dt>Hoe markeer ik een kop?</dt>
+  <dd>Met de elementen &lt;h1&gt; tot &lt;h6&gt;.</dd>
+  <dt>Hoe markeer ik een alinea?</dt>
+  <dd>Met het element &lt;p&gt;.</dd>
+  <dt>Hoe markeer ik een FAQ?</dt>
+  <dd>Met de elementen &lt;dl&gt;, &lt;dt&gt; en &lt;dd&gt;.</dd>
 </dl>
 <h2>Lijst van afkortingen</h2>
 <dl>
-\t<dt><dfn>HTML</dfn></dt>
-\t<dd>Hypertext Markup Language</dd>
-\t<dt><dfn>CSS</dfn></dt>
-\t<dd>Cascading Style Sheets</dd>
+  <dt><dfn>HTML</dfn></dt>
+  <dd>Hypertext Markup Language</dd>
+  <dt><dfn>CSS</dfn></dt>
+  <dd>Cascading Style Sheets</dd>
 </dl>
 `,
       codeStyle: `
@@ -449,14 +449,14 @@ ook jij beklimt de Fuji<br>
       title: 'Toegankelijke linktekst',
       code: `
 <a href="#" aria-label="Voormalige Britse politicus Clegg wordt rechterhand Zuckerberg bij Meta">
-\t\t<h3>Voormalige Britse politicus Clegg wordt rechterhand Zuckerberg bij Meta</h3>
-\t\t<p>In zijn nieuwe functie ... </p>
-\t\t<img src="" alt="">
+    <h3>Voormalige Britse politicus Clegg wordt rechterhand Zuckerberg bij Meta</h3>
+    <p>In zijn nieuwe functie ... </p>
+    <img src="" alt="">
 </a>
 <a href="#" aria-labelledby="id1">
-\t\t<h3 id="id1">Voormalige Britse politicus Clegg wordt rechterhand Zuckerberg bij Meta</h3>
-\t\t<p>In zijn nieuwe functie ... </p>
-\t\t<img src="" alt="">
+    <h3 id="id1">Voormalige Britse politicus Clegg wordt rechterhand Zuckerberg bij Meta</h3>
+    <p>In zijn nieuwe functie ... </p>
+    <img src="" alt="">
 </a>
 `,
       codeStyle: ``,
@@ -618,7 +618,7 @@ a:any-link {
       id: '52',
       title: 'Usemap',
       code: `
-<img src="/assets/voorbeelden/usemap.png" usemap="#vormen">
+<img src="/assets/voorbeelden/usemap.png" usemap="#vormen" alt="Een vierkant, een cirkel en een driehoek." loading="lazy">
 <map name="vormen">
   <area shape="rect" coords="30,25, 225,225" href="/">
   <area shape="circle" coords="360,120,100" href="/">
@@ -647,7 +647,9 @@ a:any-link {
      srcset="/assets/voorbeelden/waterlelie_640.webp 1x, 
              /assets/voorbeelden/waterlelie_1280.webp 2x, 
              /assets/voorbeelden/waterlelie_1920.webp 3x,
-             /assets/voorbeelden/waterlelie_hires.webp">
+             /assets/voorbeelden/waterlelie_hires.webp"
+     loading="lazy"
+>
 `,
       codeStyle: `
       img {
@@ -672,7 +674,9 @@ a:any-link {
              /assets/voorbeelden/waterlelie_1280.webp 1280w, 
              /assets/voorbeelden/waterlelie_1920.webp 1920w,
              /assets/voorbeelden/waterlelie_1920.webp 1920w"
-     sizes="(max-width: 1024px) 100vw 50vw">
+     sizes="(max-width: 1024px) 100vw 50vw"
+     loading="lazy"
+     >
 `,
       codeStyle: `
       img {
@@ -694,7 +698,7 @@ a:any-link {
   <source media="(max-width: 800px)" srcset="/assets/voorbeelden/zeilschip-800.webp">
   <source media="(max-width: 1024px)" srcset="/assets/voorbeelden/zeilschip-1024.webp">
   <source srcset="/assets/voorbeelden/zeilschip-1920.webp">
-  <img src="/assets/voorbeelden/zeilschip-1024.webp" alt="Zeilschip op zee bij ondergaande zon.">
+  <img src="/assets/voorbeelden/zeilschip-1024.webp" alt="Zeilschip op zee bij ondergaande zon." loading="lazy">
 </picture>
 `,
       codeStyle: `
@@ -735,7 +739,7 @@ a:any-link {
 <picture>
   <source srcset="/assets/voorbeelden/mark-harpur-748500-unsplash.avif" type="image/avif">
   <source srcset="/assets/voorbeelden/mark-harpur-748500-unsplash.webp" type="image/webp">
- <img src="/assets/voorbeelden/mark-harpur-748500-unsplash.jpg" alt="" width="1024" height="683">
+ <img src="/assets/voorbeelden/mark-harpur-748500-unsplash.jpg" alt="" width="1024" height="683" loading="lazy">
 </picture>
 `,
       codeStyle: `
@@ -785,69 +789,69 @@ a:any-link {
       id: '71',
       title: 'Tabel met kolomgroepen',
       code: `
-\t<table>
-\t\t<caption>Tabel 1. Tijdlijn van HTML-specificaties.</caption>
-\t\t<colgroup>
-\t\t\t<col span="4">
-\t\t\t<col span="5">
-\t\t</colgroup>
-\t\t<thead>
-\t\t<tr>
-\t\t\t<th colspan="4" scope="col">Prehistorie</th>
-\t\t\t<th colspan="5" scope="col">Moderne tijd</th>
-\t\t</tr>
-\t\t</thead>
-\t\t<tr>
-\t\t\t<td>1995</td>
-\t\t\t<td>1997</td>
-\t\t\t<td>1998</td>
-\t\t\t<td>1999</td>
-\t\t\t<td>2014</td>
-\t\t\t<td>2016</td>
-\t\t\t<td>2018</td>
-\t\t\t<td>2020</td>
-\t\t\t<td>2021 tot nu</td>
-\t\t</tr>
-\t\t<tr>
-\t\t\t<td>HTML 2.0</td>
-\t\t\t<td>HTML 3.2</td>
-\t\t\t<td>HTML 4.0</td>
-\t\t\t<td>HTML 4.01</td>
-\t\t\t<td>HTML 5</td>
-\t\t\t<td>HTML 5.1</td>
-\t\t\t<td>HTML 5.2</td>
-\t\t\t<td>HTML 5.3</td>
-\t\t\t<td>HTML Living Standard</td>
-\t\t</tr>
-\t</table>
+  <table>
+    <caption>Tabel 1. Tijdlijn van HTML-specificaties.</caption>
+    <colgroup>
+      <col span="4">
+      <col span="5">
+    </colgroup>
+    <thead>
+    <tr>
+      <th colspan="4" scope="col">Prehistorie</th>
+      <th colspan="5" scope="col">Moderne tijd</th>
+    </tr>
+    </thead>
+    <tr>
+      <td>1995</td>
+      <td>1997</td>
+      <td>1998</td>
+      <td>1999</td>
+      <td>2014</td>
+      <td>2016</td>
+      <td>2018</td>
+      <td>2020</td>
+      <td>2021 tot nu</td>
+    </tr>
+    <tr>
+      <td>HTML 2.0</td>
+      <td>HTML 3.2</td>
+      <td>HTML 4.0</td>
+      <td>HTML 4.01</td>
+      <td>HTML 5</td>
+      <td>HTML 5.1</td>
+      <td>HTML 5.2</td>
+      <td>HTML 5.3</td>
+      <td>HTML Living Standard</td>
+    </tr>
+  </table>
 `,
       codeStyle: `
       table {
-\t\t\tborder-collapse: collapse; /* voegt de randen samen tot 1 rand */
-\t\t\tbox-shadow: 0 1px 1px hsl(0 0% 0% / 0.25),
-\t\t\t0 2px 2px hsl(0 0% 0% / 0.20),
-\t\t\t0 4px 4px hsl(0 0% 0% / 0.15),
-\t\t\t0 8px 8px hsl(0 0% 0% / 0.10),
-\t\t\t0 16px 16px hsl(0 0% 0% / 0.05);;
-\t\t\tmargin: 2rem 0;
-\t\t\tpadding: 1rem;
-\t\t\tinline-size: auto;
-\t\t}
+      border-collapse: collapse; /* voegt de randen samen tot 1 rand */
+      box-shadow: 0 1px 1px hsl(0 0% 0% / 0.25),
+      0 2px 2px hsl(0 0% 0% / 0.20),
+      0 4px 4px hsl(0 0% 0% / 0.15),
+      0 8px 8px hsl(0 0% 0% / 0.10),
+      0 16px 16px hsl(0 0% 0% / 0.05);
+      margin: 2rem 0;
+      padding: 1rem;
+      inline-size: auto;
+    }
 
-\t\tcolgroup > col {
-\t\t\tbackground: #eeeeee;
-\t\t}
+    colgroup > col {
+      background: #eeeeee;
+    }
 
-\t\tcolgroup > col:last-child {
-\t\t\tbackground: #cccccc;
-\t\t}
+    colgroup > col:last-child {
+      background: #cccccc;
+    }
 
-\t\t/*hier staat: selecteer elk element td of th dat niet leeg is*/
-\t\t:is(td, th):not(:empty) {
-\t\t\tborder: 1px solid black;
-\t\t\tpadding: 4px;
-\t\t\ttext-align: center;
-\t\t}`,
+    /*hier staat: selecteer elk element td of th dat niet leeg is*/
+    :is(td, th):not(:empty) {
+      border: 1px solid black;
+      padding: 4px;
+      text-align: center;
+    }`,
       captionNumber: '',
       captionText: ''
     },
@@ -857,52 +861,52 @@ a:any-link {
       id: '72',
       title: 'Tabel met lege hoekcel',
       code: `
-\t<table>
-\t\t<tr>
-\t\t\t<th></th>
-\t\t\t<th scope="col">Product 1</th>
-\t\t\t<th scope="col">Product 2</th>
-\t\t\t<th scope="col">Product 3</th>
-\t\t</tr>
-\t\t<tr>
-\t\t\t<th scope="row">Kenmerk 1</th>
-\t\t\t<td>ja</td>
-\t\t\t<td>ja</td>
-\t\t\t<td>nee</td>
-\t\t</tr>
-\t\t<tr>
-\t\t\t<th scope="row">Kenmerk 2</th>
-\t\t\t<td>ja</td>
-\t\t\t<td>ja</td>
-\t\t\t<td>ja</td>
-\t\t</tr>
-\t\t<tr>
-\t\t\t<th scope="row">Kenmerk 3</th>
-\t\t\t<td>nee</td>
-\t\t\t<td>nee</td>
-\t\t\t<td>ja</td>
-\t\t</tr>
-\t</table>
+  <table>
+    <tr>
+      <th></th>
+      <th scope="col">Product 1</th>
+      <th scope="col">Product 2</th>
+      <th scope="col">Product 3</th>
+    </tr>
+    <tr>
+      <th scope="row">Kenmerk 1</th>
+      <td>ja</td>
+      <td>ja</td>
+      <td>nee</td>
+    </tr>
+    <tr>
+      <th scope="row">Kenmerk 2</th>
+      <td>ja</td>
+      <td>ja</td>
+      <td>ja</td>
+    </tr>
+    <tr>
+      <th scope="row">Kenmerk 3</th>
+      <td>nee</td>
+      <td>nee</td>
+      <td>ja</td>
+    </tr>
+  </table>
 `,
       codeStyle: `
       table {
-\t\t\tborder-collapse: collapse; /* voegt de randen samen tot 1 rand */
-\t\t\tbox-shadow: 0 1px 1px hsl(0 0% 0% / 0.25),
-\t\t\t0 2px 2px hsl(0 0% 0% / 0.20),
-\t\t\t0 4px 4px hsl(0 0% 0% / 0.15),
-\t\t\t0 8px 8px hsl(0 0% 0% / 0.10),
-\t\t\t0 16px 16px hsl(0 0% 0% / 0.05);;
-\t\t\tmargin: 2rem 0;
-\t\t\tpadding: 1rem;
-\t\t\tinline-size: auto;
-\t\t}
+      border-collapse: collapse; /* voegt de randen samen tot 1 rand */
+      box-shadow: 0 1px 1px hsl(0 0% 0% / 0.25),
+      0 2px 2px hsl(0 0% 0% / 0.20),
+      0 4px 4px hsl(0 0% 0% / 0.15),
+      0 8px 8px hsl(0 0% 0% / 0.10),
+      0 16px 16px hsl(0 0% 0% / 0.05);
+      margin: 2rem 0;
+      padding: 1rem;
+      inline-size: auto;
+    }
 
-\t\t/*hier staat: selecteer elk element td of th dat niet leeg is*/
-\t\t:is(td, th):not(:empty) {
-\t\t\tborder: 1px solid black;
-\t\t\tpadding: 4px;
-\t\t\ttext-align: center;
-\t\t}`,
+    /*hier staat: selecteer elk element td of th dat niet leeg is*/
+    :is(td, th):not(:empty) {
+      border: 1px solid black;
+      padding: 4px;
+      text-align: center;
+    }`,
       captionNumber: '',
       captionText: ''
     },
@@ -912,90 +916,90 @@ a:any-link {
       id: '73',
       title: 'Tabel met verkoopresultaten',
       code: `
-\t<table>
-\t\t<caption>Verkopen in augustus</caption>
-\t\t<thead>
-\t\t<tr>
-\t\t\t<td></td>
-\t\t\t<td></td>
-\t\t\t<th colspan="3" scope="colgroup">Kleding</th>
-\t\t\t<th colspan="2" scope="colgroup">Accessoires</th>
-\t\t</tr>
-\t\t</thead>
-\t\t<tbody>
-\t\t<tr>
-\t\t\t<td></td>
-\t\t\t<td></td>
-\t\t\t<th scope="col">Broeken</th>
-\t\t\t<th scope="col">Rokken</th>
-\t\t\t<th scope="col">Jurken</th>
-\t\t\t<th scope="col">Armbanden</th>
-\t\t\t<th scope="col">Ringen</th>
-\t\t</tr>
-\t\t<tr>
-\t\t\t<th rowspan="3" scope="rowgroup">België</th>
-\t\t\t<th scope="row">Antwerpen</th>
-\t\t\t<td>56</td>
-\t\t\t<td>22</td>
-\t\t\t<td>43</td>
-\t\t\t<td>72</td>
-\t\t\t<td>23</td>
-\t\t</tr>
-\t\t<tr>
-\t\t\t<th scope="row">Gent</th>
-\t\t\t<td>46</td>
-\t\t\t<td>18</td>
-\t\t\t<td>50</td>
-\t\t\t<td>61</td>
-\t\t\t<td>15</td>
-\t\t</tr>
-\t\t<tr>
-\t\t\t<th scope="row">Brussel</th>
-\t\t\t<td>51</td>
-\t\t\t<td>27</td>
-\t\t\t<td>38</td>
-\t\t\t<td>69</td>
-\t\t\t<td>28</td>
-\t\t</tr>
-\t\t<tr>
-\t\t\t<th rowspan="2" scope="rowgroup">Nederland</th>
-\t\t\t<th scope="row">Amsterdam</th>
-\t\t\t<td>89</td>
-\t\t\t<td>34</td>
-\t\t\t<td>69</td>
-\t\t\t<td>85</td>
-\t\t\t<td>38</td>
-\t\t</tr>
-\t\t<tr>
-\t\t\t<th scope="row">Utrecht</th>
-\t\t\t<td>80</td>
-\t\t\t<td>12</td>
-\t\t\t<td>43</td>
-\t\t\t<td>36</td>
-\t\t\t<td>19</td>
-\t\t</tr>
-\t\t</tbody>
-\t</table>
+  <table>
+    <caption>Verkopen in augustus</caption>
+    <thead>
+    <tr>
+      <td></td>
+      <td></td>
+      <th colspan="3" scope="colgroup">Kleding</th>
+      <th colspan="2" scope="colgroup">Accessoires</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <th scope="col">Broeken</th>
+      <th scope="col">Rokken</th>
+      <th scope="col">Jurken</th>
+      <th scope="col">Armbanden</th>
+      <th scope="col">Ringen</th>
+    </tr>
+    <tr>
+      <th rowspan="3" scope="rowgroup">België</th>
+      <th scope="row">Antwerpen</th>
+      <td>56</td>
+      <td>22</td>
+      <td>43</td>
+      <td>72</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th scope="row">Gent</th>
+      <td>46</td>
+      <td>18</td>
+      <td>50</td>
+      <td>61</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th scope="row">Brussel</th>
+      <td>51</td>
+      <td>27</td>
+      <td>38</td>
+      <td>69</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th rowspan="2" scope="rowgroup">Nederland</th>
+      <th scope="row">Amsterdam</th>
+      <td>89</td>
+      <td>34</td>
+      <td>69</td>
+      <td>85</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <th scope="row">Utrecht</th>
+      <td>80</td>
+      <td>12</td>
+      <td>43</td>
+      <td>36</td>
+      <td>19</td>
+    </tr>
+    </tbody>
+  </table>
 `,
       codeStyle: `
       table {
-\t\t\tborder-collapse: collapse; /* voegt de randen samen tot 1 rand */
-\t\t\tbox-shadow: 0 1px 1px hsl(0 0% 0% / 0.25),
-\t\t\t0 2px 2px hsl(0 0% 0% / 0.20),
-\t\t\t0 4px 4px hsl(0 0% 0% / 0.15),
-\t\t\t0 8px 8px hsl(0 0% 0% / 0.10),
-\t\t\t0 16px 16px hsl(0 0% 0% / 0.05);;
-\t\t\tmargin: 2rem 0;
-\t\t\tpadding: 1rem;
-\t\t\tinline-size: auto;
-\t\t}
+      border-collapse: collapse; /* voegt de randen samen tot 1 rand */
+      box-shadow: 0 1px 1px hsl(0 0% 0% / 0.25),
+      0 2px 2px hsl(0 0% 0% / 0.20),
+      0 4px 4px hsl(0 0% 0% / 0.15),
+      0 8px 8px hsl(0 0% 0% / 0.10),
+      0 16px 16px hsl(0 0% 0% / 0.05);
+      margin: 2rem 0;
+      padding: 1rem;
+      inline-size: auto;
+    }
 
-\t\t/*hier staat: selecteer elk element td of th dat niet leeg is*/
-\t\t:is(td, th):not(:empty) {
-\t\t\tborder: 1px solid black;
-\t\t\tpadding: 4px;
-\t\t\ttext-align: center;
-\t\t}`,
+    /*hier staat: selecteer elk element td of th dat niet leeg is*/
+    :is(td, th):not(:empty) {
+      border: 1px solid black;
+      padding: 4px;
+      text-align: center;
+    }`,
       captionNumber: '',
       captionText: ''
     },
@@ -1034,10 +1038,10 @@ a:any-link {
       code: `
 <article>
   <h3>Voorbeelden van formulieren</h3>
-  <p>Aan voorbeelden van diverse soorten formulieren wordt gewerkt. Deze worden binnenkort geplaatst, inclusief voorbeelden van PHP-code om de formulieren op de server te verwerken.</p>
+  <p>Aan voorbeelden van meer soorten formulieren wordt gewerkt.</p>
   <ul>
     <li>
-      <a href="form-aanmelden.php">Aanmeldingsformulier</a>
+      <a href="form-aanmelden.php">Voorbeeld van een aanmeldingsformulier</a>
     </li>
   </ul>
   <p>De broncode van de formulieren is op twee manieren te kopi&euml;ren.</p>
@@ -1069,21 +1073,21 @@ a:any-link {
 `,
       codeStyle: `
       @layer reset, base, theme;
-\t
+  
 @layer reset {
- \tp a {
- \t \tcolor: green;
- \t}
+   p a {
+      color: green;
+   }
 }
 @layer base {
- \ta.link {
- \t \tcolor: indianred;
- \t}
+   a.link {
+      color: indianred;
+   }
 }
 @layer theme {
- \ta {
- \t \tcolor: deepskyblue;
- \t}
+   a {
+      color: deepskyblue;
+   }
 }
 `,
       captionNumber: '',
@@ -1100,25 +1104,25 @@ a:any-link {
 `,
       codeStyle: `
 @layer reset, base, theme;
-\t
+  
 a {
   color: chocolate;
 }
-\t
+  
 @layer reset {
- \tp a {
- \t \tcolor: green;
- \t}
+   p a {
+      color: green;
+   }
 }
 @layer base {
- \ta.link {
- \t \tcolor: indianred;
- \t}
+   a.link {
+      color: indianred;
+   }
 }
 @layer theme {
- \ta {
- \t \tcolor: deepskyblue;
- \t}
+   a {
+      color: deepskyblue;
+   }
 }
 `,
       captionNumber: '',
