@@ -3,7 +3,7 @@
   <component name="PublishConfigData" serverName="ftp.peterdoolaard.nl" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false">
     <option name="confirmBeforeUploading" value="false" />
     <serverData>
-      <paths name="ftp.peterdoolaard.nl">
+      <paths name="Handboek">
         <serverdata>
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$" web="" />
