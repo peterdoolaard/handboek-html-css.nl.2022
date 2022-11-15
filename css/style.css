@@ -275,9 +275,12 @@
   text-align: center;
 }
 
-:is(.chapter-main__heading, .chapter-aside__heading) {
-  font-size: var(--font-size-chapter-sub);
-  margin-block: 2rem;
+.chapter-aside__heading:not(:first-child) {
+  margin-block-start: 1rem;
+}
+
+.errata {
+  font-weight: bold;
 }
 
 .caption-text {
