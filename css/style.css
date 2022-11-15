@@ -279,6 +279,10 @@
   margin-block-start: 1rem;
 }
 
+.chapter-aside p {
+  max-inline-size: 65ch;
+}
+
 .errata {
   font-weight: bold;
 }
