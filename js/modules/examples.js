@@ -234,7 +234,7 @@ ook jij beklimt de Fuji<br>
       chapterNumber: '3',
       exampleNumber: '15',
       id: '315',
-      title: 'Ongeordende lijst',
+      title: 'Geordende lijst',
       code: `<p>Volg deze stappen:</p>
 <ol>
   <li>Klik op Start.</li>

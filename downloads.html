@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Downloads | Handboek HTML5 en CSS</title>
   <meta name="description" content="Editie 2022. Handboek HTML 5 en CSS 3 is een leerboek en naslagwerk ineen. Leer websites bouwen met HTML en CSS.">
-  <link rel="preload" as="font" href="assets/fonts/SourceSans3-VariableFont_wght.ttf" type="font/ttf" crossorigin="">
+<!--  <link rel="preload" as="font" href="assets/fonts/SourceSans3-VariableFont_wght.ttf" type="font/ttf" crossorigin="">-->
   <link rel="stylesheet" href="/css/style.css">
   <link rel="icon" href="favicon.png" sizes="any"><!-- 32×32 -->
-  <link rel="apple-touch-icon" href="/apple-icon.png"><!-- 180×180 -->
+  <link rel="apple-touch-icon" href="/favicon.png"><!-- 180×180 -->
   <meta property="og:locale" content="nl_NL">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Handboek HTML5 en CSS | leerboek en naslag voor HTML en CSS">
@@ -40,7 +40,7 @@
   <style>
     @font-face {
       font-family: 'SourceSans3';
-      src: url("../assets/fonts/SourceSans3-VariableFont_wght.ttf") format('truetype');
+      src: url("/assets/fonts/SourceSans3-VariableFont_wght.ttf") format('truetype');
       font-style: normal;
       font-weight: 200 900;
       font-display: swap;
@@ -273,6 +273,22 @@
     }
 
   </style>
+  <!-- Matomo -->
+  <script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//handboek-html-css.nl/matomo/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '1']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+
 </head>
 <body translate="no">
 <a href="#" class="to-top" aria-label="Omhoog">
