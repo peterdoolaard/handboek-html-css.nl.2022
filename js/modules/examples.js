@@ -797,41 +797,43 @@ a:any-link {
       id: '71',
       title: 'Tabel met kolomgroepen',
       code: `
-  <table>
-    <caption>Tabel 1. Tijdlijn van HTML-specificaties.</caption>
-    <colgroup>
-      <col span="4">
-      <col span="5">
-    </colgroup>
-    <thead>
-    <tr>
-      <th colspan="4" scope="col">Prehistorie</th>
-      <th colspan="5" scope="col">Moderne tijd</th>
-    </tr>
-    </thead>
-    <tr>
-      <td>1995</td>
-      <td>1997</td>
-      <td>1998</td>
-      <td>1999</td>
-      <td>2014</td>
-      <td>2016</td>
-      <td>2018</td>
-      <td>2020</td>
-      <td>2021 tot nu</td>
-    </tr>
-    <tr>
-      <td>HTML 2.0</td>
-      <td>HTML 3.2</td>
-      <td>HTML 4.0</td>
-      <td>HTML 4.01</td>
-      <td>HTML 5</td>
-      <td>HTML 5.1</td>
-      <td>HTML 5.2</td>
-      <td>HTML 5.3</td>
-      <td>HTML Living Standard</td>
-    </tr>
-  </table>
+    <div class="responsive-table">
+     <table>
+      <caption>Tabel 1. Tijdlijn van HTML-specificaties.</caption>
+      <colgroup>
+        <col span="4">
+        <col span="5">
+      </colgroup>
+      <thead>
+      <tr>
+        <th colspan="4" scope="col">Prehistorie</th>
+        <th colspan="5" scope="col">Moderne tijd</th>
+      </tr>
+      </thead>
+      <tr>
+        <td>1995</td>
+        <td>1997</td>
+        <td>1998</td>
+        <td>1999</td>
+        <td>2014</td>
+        <td>2016</td>
+        <td>2018</td>
+        <td>2020</td>
+        <td>2021 tot nu</td>
+      </tr>
+      <tr>
+        <td>HTML 2.0</td>
+        <td>HTML 3.2</td>
+        <td>HTML 4.0</td>
+        <td>HTML 4.01</td>
+        <td>HTML 5</td>
+        <td>HTML 5.1</td>
+        <td>HTML 5.2</td>
+        <td>HTML 5.3</td>
+        <td>HTML Living Standard</td>
+      </tr>
+    </table>
+  </div>
 `,
       codeStyle: `
       table {
@@ -859,6 +861,11 @@ a:any-link {
       border: 1px solid black;
       padding: 4px;
       text-align: center;
+    }
+    
+    div.responsive-table {
+      inline-size: 100%;
+      overflow-x: auto;
     }`,
       captionNumber: '',
       captionText: ''
@@ -924,70 +931,72 @@ a:any-link {
       id: '73',
       title: 'Tabel met verkoopresultaten',
       code: `
-  <table>
-    <caption>Verkopen in augustus</caption>
-    <thead>
-    <tr>
-      <td></td>
-      <td></td>
-      <th colspan="3" scope="colgroup">Kleding</th>
-      <th colspan="2" scope="colgroup">Accessoires</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <td></td>
-      <td></td>
-      <th scope="col">Broeken</th>
-      <th scope="col">Rokken</th>
-      <th scope="col">Jurken</th>
-      <th scope="col">Armbanden</th>
-      <th scope="col">Ringen</th>
-    </tr>
-    <tr>
-      <th rowspan="3" scope="rowgroup">België</th>
-      <th scope="row">Antwerpen</th>
-      <td>56</td>
-      <td>22</td>
-      <td>43</td>
-      <td>72</td>
-      <td>23</td>
-    </tr>
-    <tr>
-      <th scope="row">Gent</th>
-      <td>46</td>
-      <td>18</td>
-      <td>50</td>
-      <td>61</td>
-      <td>15</td>
-    </tr>
-    <tr>
-      <th scope="row">Brussel</th>
-      <td>51</td>
-      <td>27</td>
-      <td>38</td>
-      <td>69</td>
-      <td>28</td>
-    </tr>
-    <tr>
-      <th rowspan="2" scope="rowgroup">Nederland</th>
-      <th scope="row">Amsterdam</th>
-      <td>89</td>
-      <td>34</td>
-      <td>69</td>
-      <td>85</td>
-      <td>38</td>
-    </tr>
-    <tr>
-      <th scope="row">Utrecht</th>
-      <td>80</td>
-      <td>12</td>
-      <td>43</td>
-      <td>36</td>
-      <td>19</td>
-    </tr>
-    </tbody>
-  </table>
+  <div class="responsive-table">
+    <table>
+      <caption>Verkopen in augustus</caption>
+      <thead>
+      <tr>
+        <td></td>
+        <td></td>
+        <th colspan="3" scope="colgroup">Kleding</th>
+        <th colspan="2" scope="colgroup">Accessoires</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td></td>
+        <td></td>
+        <th scope="col">Broeken</th>
+        <th scope="col">Rokken</th>
+        <th scope="col">Jurken</th>
+        <th scope="col">Armbanden</th>
+        <th scope="col">Ringen</th>
+      </tr>
+      <tr>
+        <th rowspan="3" scope="rowgroup">België</th>
+        <th scope="row">Antwerpen</th>
+        <td>56</td>
+        <td>22</td>
+        <td>43</td>
+        <td>72</td>
+        <td>23</td>
+      </tr>
+      <tr>
+        <th scope="row">Gent</th>
+        <td>46</td>
+        <td>18</td>
+        <td>50</td>
+        <td>61</td>
+        <td>15</td>
+      </tr>
+      <tr>
+        <th scope="row">Brussel</th>
+        <td>51</td>
+        <td>27</td>
+        <td>38</td>
+        <td>69</td>
+        <td>28</td>
+      </tr>
+      <tr>
+        <th rowspan="2" scope="rowgroup">Nederland</th>
+        <th scope="row">Amsterdam</th>
+        <td>89</td>
+        <td>34</td>
+        <td>69</td>
+        <td>85</td>
+        <td>38</td>
+      </tr>
+      <tr>
+        <th scope="row">Utrecht</th>
+        <td>80</td>
+        <td>12</td>
+        <td>43</td>
+        <td>36</td>
+        <td>19</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
 `,
       codeStyle: `
       table {
@@ -1007,6 +1016,10 @@ a:any-link {
       border: 1px solid black;
       padding: 4px;
       text-align: center;
+    }
+    div.responsive-table {
+      inline-size: 100%;
+      overflow-x: auto;
     }`,
       captionNumber: '',
       captionText: ''
