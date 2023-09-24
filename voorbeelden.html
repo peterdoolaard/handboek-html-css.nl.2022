@@ -292,13 +292,7 @@
   </script>
   <!-- End Matomo Code -->
 </head>
-<body translate="no">
-<a href="#" class="to-top" aria-label="Omhoog">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-cheveron-up-circle">
-    <circle cx="12" cy="12" r="10" class="primary"/>
-    <path class="secondary" d="M8.7 13.7a1 1 0 1 1-1.4-1.4l4-4a1 1 0 0 1 1.4 0l4 4a1 1 0 0 1-1.4 1.4L12 10.42l-3.3 3.3z"/>
-  </svg>
-</a>
+<body>
 <div class="page-wrapper">
   <header>
     <a href="#main-content" class="screen-reader-text">Naar de hoofdinhoud</a>
@@ -328,10 +322,10 @@
       <a href="/voorbeelden.html" class="screen-reader-text">Handboek HTML 5 en CSS 3, 6e editie, 2022</a>
     </h1>
     <nav class="nav-main">
-      <button type="button" class="slider slider-left" aria-label="Scroll links">
+        <button type="button" class="slider slider-left" aria-hidden="true" tabindex="-1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-cheveron-left-circle"><circle cx="12" cy="12" r="10" class="primary"/><path class="secondary" d="M13.7 15.3a1 1 0 0 1-1.4 1.4l-4-4a1 1 0 0 1 0-1.4l4-4a1 1 0 0 1 1.4 1.4L10.42 12l3.3 3.3z"/></svg>
       </button>
-      <button type="button" class="slider slider-right" aria-label="Scroll rechts">
+      <button type="button" class="slider slider-right" aria-hidden="true" tabindex="-1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-cheveron-right-circle"><circle cx="12" cy="12" r="10" class="primary"/><path class="secondary" d="M10.3 8.7a1 1 0 0 1 1.4-1.4l4 4a1 1 0 0 1 0 1.4l-4 4a1 1 0 0 1-1.4-1.4l3.29-3.3-3.3-3.3z"/></svg>
       </button>
       <ul class="nav-list">
@@ -394,7 +388,8 @@
         <p>Sommige technieken staan op een eigen pagina. Dat zijn:</p>
         <ul role="list">
           <li><a class="link-text" href="form-aanmelden.php">Een compleet aanmeldingsformulier met verwerking op de server</a></li>
-          <li><a class="link-text" href="nos_voorbeeld.html">CSS Grid Layout (voorbeeld voorpagina nos.nl)</a></li>
+          <li><a class="link-text" href="nos_voorbeeld.html">CSS Grid Layout (voorbeeld voorpagina nos.nl)</a>. De complete
+            <a class="link-text" href="https://github.com/peterdoolaard/nos-grid-voorbeeld">code voor deze pagina</a> kun je downloaden van GitHub.</li>
         </ul>
         <p>Voor vragen of bij problemen mailt u <a class="link-text" href="mailto:handboek@peterdoolaard.nl">handboek@peterdoolaard.nl</a></p>
       </div>
@@ -1116,6 +1111,12 @@
       </div>
     </main>
   </div>
+  <a href="#" class="to-top" aria-label="Omhoog">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-cheveron-up-circle">
+      <circle cx="12" cy="12" r="10" class="primary"/>
+      <path class="secondary" d="M8.7 13.7a1 1 0 1 1-1.4-1.4l4-4a1 1 0 0 1 1.4 0l4 4a1 1 0 0 1-1.4 1.4L12 10.42l-3.3 3.3z"/>
+    </svg>
+  </a>
 </div>
 <div id="navigationobserver"></div>
 
