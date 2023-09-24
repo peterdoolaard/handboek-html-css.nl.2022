@@ -764,7 +764,11 @@ a:any-link {
     <p>Upgrade uw browser. Intussen kunt u <a href="/assets/voorbeelden/big_buck_bunny.mov">de film</a> downloaden.</p>
 </video>
 `,
-      codeStyle: ``,
+      codeStyle: `
+      video {
+        block-size: auto;
+        inline-size: 100%;
+      }`,
       captionNumber: '',
       captionText: ''
     },
@@ -779,7 +783,11 @@ a:any-link {
   <track kind="subtitles" src="/assets/voorbeelden/wildlife_subtitles2.vtt" srclang="en" label="English">
 </video>
 `,
-      codeStyle: ``,
+      codeStyle: `
+      video {
+        block-size: auto;
+        inline-size: 100%;
+      }`,
       captionNumber: '',
       captionText: ''
     },
