@@ -125,10 +125,17 @@ class CodeExample extends HTMLElement {
     template.innerHTML = `
 <link rel="stylesheet" href="/css/prism.css">
   <style>
-  :host {
+    
+  /* zorg ervoor dat tekst in elk voorbeeld het initiële lettertype krijgt */
+  .figure-container {
     font-family: initial;
   }
   
+  /* alleen het label zorg ervoor dat elk voorbeeld het initiële lettertype gebruikt */
+  .figure-container :is(.code-edit__label, .button-reset-code) {
+    font-family: SourceSans3;
+  }
+    
   a:any-link, button, [type="button"] {
     -webkit-tap-highlight-color: transparent;
   }
@@ -225,8 +232,10 @@ class CodeExample extends HTMLElement {
   }
   
   .code-edit__label {
+    align-items: center;
+    border-radius: 1px;
     display: flex;
-    font-family: var(--font-sans);
+    font-family: SourceSans3 sans-serif;
     inline-size: 8em;
     position: relative;
   }
@@ -262,6 +271,13 @@ class CodeExample extends HTMLElement {
    
   .code-edit__label > input {
     opacity: 0;
+  }
+  
+  .code-edit__label:focus-within {
+    outline: 2px solid blue; 
+    outline-color: -webkit-focus-ring-color;
+    outline-color: -moz-mac-focusring;
+    outline-offset: 6px;
   }
   
   .btn-reset-code {
