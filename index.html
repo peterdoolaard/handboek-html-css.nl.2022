@@ -399,7 +399,7 @@
   });
 
   const partnerLink = document.querySelector('.widget a[href^="https://partner.bol.com/click/"]');
-  const generalLink = document.querySelector('.widget-alternative a');
+  const generalLink = document.querySelector('.widget-alternative');
   if (window.getComputedStyle(partnerLink).getPropertyValue('display') === 'none') {
     generalLink.classList.add('show-widget')
   }
