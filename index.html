@@ -401,8 +401,9 @@
   const partnerLink = document.querySelector('.widget a[href^="https://partner.bol.com/click/"]');
   const generalLink = document.querySelector('.widget-alternative');
   if (window.getComputedStyle(partnerLink).getPropertyValue('display') === 'none') {
-    console.log('blocked');
+    generalLink.classList.add('show-widget')
   }
+
 </script>
 </body>
 </html>
