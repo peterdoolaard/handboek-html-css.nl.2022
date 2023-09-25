@@ -331,10 +331,6 @@
 
 /* when AdBlocker is active */
 a[href^="https://partner.bol.com/click/"] + a.widget-alternative {
-  display: inline;
-}
-
-a:not([href^="https://partner.bol.com/click/"]) + a.widget-alternative {
   display: none;
 }
 
