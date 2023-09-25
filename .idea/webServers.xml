@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="76043b9d-4b02-407c-9023-8ad70f1958e2" name="handboek" url="https://peterdoolaard.nl">
+        <fileTransfer rootFolder="/domains/handboek-html-css.nl/public_html" accessType="FTPS" host="ftp.peterdoolaard.nl" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
