@@ -329,9 +329,13 @@
   justify-self: center;
 }
 
-/* when AdBlocker is active */
-a[href^="https://partner.bol.com/click/"] + a.widget-alternative {
+.widget-alternative {
   display: none;
+}
+
+/* when AdBlocker is active */
+.show-widget {
+  display: inline!important;
 }
 
 .widget img {
