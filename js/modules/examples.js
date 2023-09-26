@@ -1101,7 +1101,7 @@ a:any-link {
    }
 }
 @layer base {
-   a.link {
+   a[href] {
       color: indianred;
    }
 }
@@ -1136,7 +1136,7 @@ a {
    }
 }
 @layer base {
-   a.link {
+   a[href] {
       color: indianred;
    }
 }

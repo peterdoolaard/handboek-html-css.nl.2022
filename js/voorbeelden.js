@@ -133,7 +133,7 @@ class CodeExample extends HTMLElement {
   
   /* alleen het label zorg ervoor dat elk voorbeeld het initiële lettertype gebruikt */
   .figure-container :is(.code-edit__label, .button-reset-code) {
-    font-family: SourceSans3;
+    font-family: SourceSans3, sans-serif;
   }
     
   a:any-link, button, [type="button"] {
