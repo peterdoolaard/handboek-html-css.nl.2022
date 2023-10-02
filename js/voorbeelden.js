@@ -73,13 +73,16 @@ let navigationObserver = new IntersectionObserver(entries => {
     fixedNav.classList.add('fixed');
     toTop.removeAttribute('hidden');
     NAV_IS_FIXED = true;
+    document.querySelector('.inleiding').style.marginBlockStart = '5rem';
   } else {
     fixedNav.classList.remove('fixed');
     toTop.setAttribute('hidden', 'true');
     NAV_IS_FIXED = false;
+    document.querySelector('.inleiding').style.marginBlockStart = '0';
+
   }
 });
-navigationObserver.observe(document.querySelector('#navigationobserver'));
+navigationObserver.observe(document.getElementById('navigationobserver'));
 
 // knoppen voor het horizontale menu
 sliderBtn.forEach(btn => {
