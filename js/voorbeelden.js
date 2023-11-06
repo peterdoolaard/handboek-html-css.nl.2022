@@ -177,6 +177,7 @@ class CodeExample extends HTMLElement {
   }
   
   .code-wrapper pre {
+    min-block-size: 3rem;
     position: relative;
     overflow-x: auto;
   }
@@ -396,7 +397,6 @@ class CodeExample extends HTMLElement {
             alertElm.focus();
             removeElm(codeWrapper, alertElm, 1000);
           }, () => {
-            console.log('Kopiëren is niet toegestaan');
             codeWrapper.appendChild(createAlertElm('Kopiëren is niet toegestaan', [ 'alert', 'failed' ]));
             let alertElm = codeWrapper.querySelector('div.alert');
             removeElm(codeWrapper, alertElm, 1000);
@@ -405,21 +405,29 @@ class CodeExample extends HTMLElement {
     }
 
     // event listener voor de codekopieerknop
-    this.shadowRoot.querySelectorAll('.btn-copy-code').forEach(btn => btn.addEventListener('click', copyCode));
-    this.shadowRoot.querySelectorAll('.btn-copy-code').forEach(elm => elm.addEventListener('pointerdown', (event) => {
+    const btnCopyCode = this.shadowRoot.querySelectorAll('.btn-copy-code');
+    const btnResetCode = this.shadowRoot.querySelector('.btn-reset-code');
+
+    btnCopyCode.forEach(btn => btn.addEventListener('click', copyCode));
+    btnCopyCode.forEach(elm => elm.addEventListener('pointerdown', (event) => {
       event.target.classList.add('btn-copy-code-click');
     }));
-    this.shadowRoot.querySelectorAll('.btn-copy-code').forEach(elm => elm.addEventListener('pointerup', (event) => {
+    btnCopyCode.forEach(elm => elm.addEventListener('pointerup', (event) => {
       event.target.classList.remove('btn-copy-code-click');
     }));
     // event listener voor de resetknop
-    this.shadowRoot.querySelector('.btn-reset-code').addEventListener('click', (event) => {
+    btnResetCode.addEventListener('click', (event) => {
       const resetEditButton = event.target.previousElementSibling.querySelector('[type="checkbox"]');
       resetCode(resetEditButton);
     });
 
     // voorkom plakken, want dat veroorzaakt problemen
-    this.shadowRoot.querySelectorAll('.code-wrapper').forEach( elm => { elm.addEventListener('paste', (event) => event.preventDefault())});
+    const codeWrapper = this.shadowRoot.querySelectorAll('.code-wrapper');
+    codeWrapper.forEach( elm => { elm.addEventListener('paste', (event) => event.preventDefault())});
+
+    const toggleEdit = this.shadowRoot.querySelector('.code-edit__label > input');
+    const htmlCode = this.shadowRoot.querySelector('.example-html');
+    const cssCode = this.shadowRoot.querySelector('.example-css');
 
     // observeer wijzigingen van de voorbeeldcode
     // geeft ze door aan custom element
@@ -433,7 +441,7 @@ class CodeExample extends HTMLElement {
     const observeCodeWrapper = new MutationObserver(mutations => {
       mutations.forEach(mutation => {
         if (mutation.target.length > 0) {
-          this.shadowRoot.querySelector('.btn-reset-code').style.opacity = '1';
+          btnResetCode.style.opacity = '1';
           if (mutation.target.parentElement.classList.contains('example-html')) {
             this.shadowRoot.querySelector('.example-code').innerHTML = this.shadowRoot.querySelector('.example-html').textContent;
           }
@@ -444,8 +452,6 @@ class CodeExample extends HTMLElement {
       });
     });
 
-    const codeWrapper = this.shadowRoot.querySelector('.code-wrapper');
-    const toggleEdit = this.shadowRoot.querySelector('.code-edit__label > input');
 
     // Return/Enter maakt een nieuw blokelelement. Dat is ongewenst.
     // Wordt omgezet naar Shift+Enter, een 'zachte return'
@@ -473,14 +479,17 @@ class CodeExample extends HTMLElement {
     toggleEdit.addEventListener('change', () => {
       if (toggleEdit.checked) {
         this.shadowRoot.addEventListener('keydown', reAssignEnterKey);
-        codeWrapper.setAttribute('contenteditable', true);
-        codeWrapper.focus();
+        htmlCode.setAttribute('contenteditable', true);
+        cssCode.setAttribute('contenteditable', true);
         // verwijder prism color coding door alle spans te verwijderen
-        this.shadowRoot.querySelector('.example-html').textContent = this.shadowRoot.querySelector('.example-html').textContent;
-        this.shadowRoot.querySelector('.example-css').textContent = this.shadowRoot.querySelector('.example-css').textContent;
-        observeCodeWrapper.observe(codeWrapper, config);
+        htmlCode.textContent = htmlCode.textContent;
+        cssCode.textContent = cssCode.textContent;
+        observeCodeWrapper.observe(htmlCode, config);
+        observeCodeWrapper.observe(cssCode, config);
       } else {
-        codeWrapper.setAttribute('contenteditable', false);
+        htmlCode.removeAttribute('contenteditable');
+        cssCode.removeAttribute('contenteditable');
+        observeCodeWrapper.disconnect();
         observeCodeWrapper.disconnect();
         Prism.highlightAllUnder(this.shadowRoot);
         Prism.plugins.NormalizeWhitespace.setDefaults({
