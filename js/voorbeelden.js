@@ -172,6 +172,10 @@ class CodeExample extends HTMLElement {
     padding: 0.5rem 0.5rem 0.5rem 1rem;
   }
   
+  .example-code code {
+    font-size: 0.9em;;
+  }
+  
   .example-html {
     white-space: pre-wrap!important;
   }

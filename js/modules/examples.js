@@ -1028,6 +1028,174 @@ a:any-link {
       chapterNumber: '10',
       exampleNumber: '1',
       id: '101',
+      title: 'Positionering',
+      code: `<div class="flex">
+  <div>Ik sta op mijn normale positie.</div>
+  <div class="positie"><p>Probeer wat er gebeurt als de positionering in de klasse <code>.positie</code> <code>relative</code> of <code>absolute</code> is. Probeer ook <code>fixed</code> en <code>static</code></p></div>
+  <div>Ik sta op mijn normale positie.</div>
+</div>
+      `,
+      codeStyle: '.positie {\n' +
+        '  position: relative;\n' +
+        '  left: 75px;\n' +
+        '  top: 150px;\n' +
+        '}\n' +
+        '.flex {\n' +
+        '  display: flex;\n' +
+        '  margin-bottom: 200px;\n' +
+        '  border: 2px dashed hsl(140, 70%, 15%);\n' +
+        '  max-width: max-content;\n' +
+        '}\n' +
+        '.flex > * {\n' +
+        '  background-color: hsl(140, 70%, 70%);\n' +
+        '  border: 2px solid hsl(140, 70%, 15%);\n' +
+        '  border-radius: 6px;\n' +
+        '  color: hsl(140, 5%, 5%);\n' +
+        '  margin: 0;\n' +
+        '  padding: 1em;\n' +
+        '  height: 200px;\n' +
+        '  width: 200px;\n' +
+        '  display: flex;\n' +
+        '  align-items: center;\n' +
+        '  justify-content: center;\n' +
+        '}'
+    },
+    {
+      chapterNumber: '10',
+      exampleNumber: '2',
+      id: '102',
+      title: 'Position sticky',
+      code: `<aside class="sticky">
+  <article>
+    <h2>Prikkelende kop</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dicta ipsam itaque optio quas sit
+      voluptatem! Asperiores cumque dolorum itaque iusto optio possimus quam reprehenderit rerum, sapiente similique
+      temporibus vero!</p>
+  </article>
+  <article>
+    <h2>Nog een kop</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus dicta ipsam itaque optio quas sit
+      voluptatem! Asperiores cumque dolorum itaque iusto optio possimus quam reprehenderit rerum, sapiente similique
+      temporibus vero!</p>
+  </article>
+</aside>`,
+      codeStyle: `aside {
+  background-color: rgba(200, 100, 100, .5);
+  height: 450px;
+  margin-right: 1em;
+  overflow-y: auto;
+  padding: 0 1em;
+  width: 300px;
+}
+
+h2 {
+  background-color: rgba(200, 100, 100, 1);
+  margin: 0;
+  position: sticky;
+  top: 0;
+}
+
+article {
+  margin-top: 2em;
+}
+
+article:last-of-type {
+  margin-bottom: 100vh;
+}`
+    },
+    {
+      chapterNumber: '10',
+      exampleNumber: '3',
+      id: '103',
+      title: 'Floatende content',
+      code: `<article>
+  <h2>Float: afbeelding naar links</h2>
+  <p><img src="/assets/voorbeelden/jeremy-bishop-527439-unsplash.jpg" alt="">Lorem ipsum dolor sit amet, consectetur adipisicing
+    elit. Ad alias animi aperiam debitis earum, eos et, laborum magni maiores molestiae nemo quia quibusdam reiciendis
+    ut voluptate. Consequatur eaque et sint. Dolorem, nostrum, vero! Lorem ipsum dolor sit amet, consectetur adipisicing
+    elit. Ad alias animi aperiam debitis earum, eos et, laborum magni maiores molestiae nemo quia quibusdam reiciendis
+    ut voluptate. Consequatur eaque et sint. Dolorem, nostrum, vero! Lorem ipsum dolor sit amet, consectetur adipisicing
+    elit. Ad alias animi aperiam debitis earum, eos et, laborum magni maiores molestiae nemo quia quibusdam reiciendis
+    ut voluptate. Consequatur eaque et sint. Dolorem, nostrum, vero!</p>
+</article>
+<article>
+  <h2>Float: afbeelding naar rechts</h2>
+  <p><img src="/assets/voorbeelden/jeremy-bishop-527439-unsplash.jpg" alt="">Lorem ipsum dolor sit amet, consectetur adipisicing
+    elit. Ad alias animi aperiam debitis earum, eos et, laborum magni maiores molestiae nemo quia quibusdam reiciendis
+    ut voluptate. Consequatur eaque et sint. Dolorem, nostrum, vero! Lorem ipsum dolor sit amet, consectetur adipisicing
+    elit. Ad alias animi aperiam debitis earum, eos et, laborum magni maiores molestiae nemo quia quibusdam reiciendis
+    ut voluptate. Consequatur eaque et sint. Dolorem, nostrum, vero! Lorem ipsum dolor sit amet, consectetur adipisicing
+    elit. Ad alias animi aperiam debitis earum, eos et, laborum magni maiores molestiae nemo quia quibusdam reiciendis
+    ut voluptate. Consequatur eaque et sint. Dolorem, nostrum, vero!</p>
+</article>`,
+      codeStyle: `article {
+  border: 1px solid black;
+  padding: 10px;
+  width: 100%;
+}
+h2 {
+  clear: both;
+  margin-top: 0;
+}
+p {
+  line-height: 1.25;
+  margin: 0;
+}
+img {
+  float: left;
+  height: auto;
+  margin: 0 1em 1em 0;
+  max-width: 25%;
+}
+article:nth-of-type(2) img {
+  float: right;
+  margin: 0 0 1em 1em;
+}`
+    },
+    {
+      chapterNumber: '10',
+      exampleNumber: '4',
+      id: '104',
+      title: 'Probleem met float',
+      code: `<article>
+  <h2>Float: afbeelding naar links</h2>
+  <p><img src="/assets/voorbeelden/jeremy-bishop-527439-unsplash.jpg" alt="">Bekijk wat er gebeurt wanneer u in de CSS van het <code>article</code> afwisselend <code>clear: both</code> of <code>display: flow-root</code> gebruikt. Verwijder de commentaarmarkering /* ... */ of typ de code zelf. </p>
+</article>
+<article>
+  <h2>Float: afbeelding naar rechts</h2>
+  <p><img src="/assets/voorbeelden/jeremy-bishop-527439-unsplash.jpg" alt="">Lorem ipsum dolor sit amet, consectetur adipisicing
+    elit. Ad alias animi aperiam debitis earum, eos et, laborum magni maiores molestiae nemo quia quibusdam reiciendis
+    ut voluptate. Consequatur eaque et sint. Dolorem, nostrum, vero!</p>
+</article>`,
+      codeStyle: `article {
+  border: 1px solid black;
+  /* clear: both; */
+  /* display: flow-root; */
+  padding: 10px;
+  width: 100%;
+}
+h2 {
+  margin-top: 0;
+}
+p {
+  line-height: 1.25;
+  margin: 0;
+}
+img {
+  float: left;
+  height: auto;
+  margin: 0 1em 1em 0;
+  max-width: 25%;
+}
+article:nth-of-type(2) img {
+  float: right;
+  margin: 0 0 1em 1em;
+}`
+    },
+    {
+      chapterNumber: '10',
+      exampleNumber: '5',
+      id: '105',
       title: 'Remake nos.nl met CSS Grid Layout',
       code: `
           <article>

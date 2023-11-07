@@ -391,6 +391,14 @@
         </ul>
         <h3 class="inleiding-subkop">Fouten en verbeteringen</h3>
         <p><span class="errata">Op pagina 227</span> staat bij oplossing 2 dat de specificiteit 21 is. Dat is fout. De juiste waarde is 11. Een attribuutselector en een klasse tellen ieder voor 10 en een element voor 1. Ook bij oplossing 3 is de uitkomst niet 21 maar 11.</p>
+          <p>
+            <span class="errata">Op pagina 305</span>
+            staat bovenaan een fout in de declaratie voor het griditem. De juiste code is:
+          </p>
+          <pre><code>.grid-item:nth-child(2) {
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 2;
+}</code></pre>
         <p><span class="errata">In de voorbeelden 8.1 en 8.2</span> zat een fout waardoor deze voorbeelden niet het goede resultaat lieten zien. Die fout is hersteld, waardoor spelen met de cascade layers nu wel het bedoelde resultaat geeft.</p>
         <h3 class="inleiding-subkop">Contact</h3>
         <p>Voor vragen of bij problemen mailt u <a class="link-text" href="mailto:handboek@peterdoolaard.nl">handboek@peterdoolaard.nl</a></p>
