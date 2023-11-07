@@ -52,6 +52,7 @@
       0 4px 4px hsl(0 0% 0% / 0.12),
       0 8px 8px hsl(0 0% 0% / 0.12),
       0 16px 16px hsl(0 0% 0% / 0.12);
+
       --box-shadow-sharp: 0 1px 1px hsl(0 0% 0% / 0.25),
       0 2px 2px hsl(0 0% 0% / 0.20),
       0 4px 4px hsl(0 0% 0% / 0.15),
@@ -358,14 +359,14 @@
         <p>Deze site is nog niet klaar. Als eerste worden de resterende voorbeelden en links toegevoegd. Daarna is er tijd voor meer verdiepende artikelen. Die kunnen ook gaan over onderwerpen die &uacute; aandraagt. Mail suggesties naar
           <a class="link-text" href="mailto:handboek@peterdoolaard.nl">handboek@peterdoolaard.nl</a>.</p>
       </div>
-      <aside class="widget">
-        <a href="https://partner.bol.com/click/click?p=2&t=url&s=42237&f=TXL&url=https%3A%2F%2Fwww.bol.com%2Fnl%2Fnl%2Fp%2Fhandboek-handboek-html5-en-css%2F9300000070553907%2F&name=Handboek%20-%20Handboek%20HTML5%20en%20CSS">
+      <aside>
+        <a class="widget" href="https://partner.bol.com/click/click?p=2&t=url&s=42237&f=TXL&url=https%3A%2F%2Fwww.bol.com%2Fnl%2Fnl%2Fp%2Fhandboek-handboek-html5-en-css%2F9300000070553907%2F&name=Handboek%20-%20Handboek%20HTML5%20en%20CSS">
           <div class="widget-container">
             <div class="widget-image">
               <picture>
                 <source srcset="/assets/images/9789463562645-groot.avif" type="image/avif">
                 <source srcset="/assets/images/9789463562645-groot.webp" type="image/webp">
-                <img src="/assets/images/9789463562645-300.jpg" alt="Omslag Handboek HTML 5 en CSS" width="300" height="402" loading="lazy">
+                <img src="/assets/images/9789463562645-300.jpg" alt="" width="300" height="402" loading="lazy">
               </picture>
             </div>
             <div class="widget-text">
@@ -386,7 +387,7 @@
               <picture>
                 <source srcset="/assets/images/9789463562645-groot.avif" type="image/avif">
                 <source srcset="/assets/images/9789463562645-groot.webp" type="image/webp">
-                <img src="/assets/images/9789463562645-300.jpg" alt="Omslag Handboek HTML 5 en CSS" width="300" height="402" loading="lazy">
+                <img src="/assets/images/9789463562645-300.jpg" alt="" width="300" height="402" loading="lazy">
               </picture>
             </div>
             <div class="widget-text">
@@ -415,10 +416,20 @@
 <div id="navigationobserver"></div>
 
 <script>
+  //Verberg lettertypewisseling
   const contentWrapper = document.querySelector('.content-wrapper');
   contentWrapper.setAttribute('hidden', '');
   window.addEventListener('load', () => {
     contentWrapper.removeAttribute('hidden');
+    //Fallback voor geblokkeerde Bol-partnerlink
+    const partnerLink = document.querySelector('.widget a[href^="https://partner.bol.com/click/"]');
+    const generalLink = document.querySelector('.widget-alternative');
+    if (partnerLink !== null) {
+      if (window.getComputedStyle(partnerLink).getPropertyValue('display') === 'none') {
+        generalLink.classList.add('show-widget');
+      }
+    }
+
   });
 
   // fixed knop voor navigatie naar boven
@@ -426,13 +437,6 @@
     event.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-
-  const partnerLink = document.querySelector('.widget a[href^="https://partner.bol.com/click/"]');
-  const generalLink = document.querySelector('.widget-alternative');
-  if (window.getComputedStyle(partnerLink).getPropertyValue('display') === 'none') {
-    generalLink.classList.add('show-widget');
-  }
-
 </script>
 </body>
 </html>
